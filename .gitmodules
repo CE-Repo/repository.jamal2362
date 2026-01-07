@@ -46,3 +46,7 @@
 	path = addons/script.wikipedia
 	url = https://github.com/CE-Repo/script.wikipedia.git
 	branch = main
+[submodule "addons/plugin.video.composite_for_plex"]
+	path = addons/plugin.video.composite_for_plex
+	url = https://github.com/CE-Repo/plugin.video.composite_for_plex.git
+	branch = master
