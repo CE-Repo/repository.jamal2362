@@ -38,3 +38,7 @@
 	path = addons/screensaver.matrix
 	url = https://github.com/CE-Repo/screensaver.matrix.git
 	branch = main
+[submodule "addons/plugin.video.gronkhtv"]
+	path = addons/plugin.video.gronkhtv
+	url = https://github.com/CE-Repo/plugin.video.gronkhtv.git
+	branch = main
