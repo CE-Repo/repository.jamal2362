@@ -18,3 +18,7 @@
 	path = addons/script.skinvariables
 	url = https://github.com/jurialmunkey/script.skinvariables.git
 	branch = nexus
+[submodule "addons/script.skin.helper.colorpicker"]
+	path = addons/script.skin.helper.colorpicker
+	url = https://github.com/kodi-community-addons/script.skin.helper.colorpicker.git
+	branch = master
