@@ -1,0 +1,36 @@
+name: Update Modules
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: update
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_KODI_REPO_TOKEN }}
+          submodules: recursive
+          fetch-depth: 0
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Update pip
+        run: python -m pip install --upgrade pip
+      - name: Update Submodules
+        run: |
+          git submodule update --init --recursive --checkout --remote -f
+          git config --global user.name "GitHub Action"
+          git config --global user.email "noreply@github.com"
+      - name: Repo Generator
+        run: python ./_repo_generator.py
+      - name: Commit packages
+        run: |
+          git add .
+          git diff --cached --quiet || (git commit -m ":package: Addons updated." && git push)
