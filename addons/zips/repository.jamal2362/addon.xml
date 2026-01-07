@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.jamal2362" name="Jamal2362 Repository" version="3.0" provider-name="jamal2362">
+    <extension point="xbmc.addon.repository" name="Jamal2362 Repository">
+        <dir minversion="21.0.0">
+            <info compressed="false">https://raw.githubusercontent.com/CE-Repo/repository.jamal2362/main/addons/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/CE-Repo/repository.jamal2362/main/addons/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/CE-Repo/repository.jamal2362/main/addons/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Jamal2362 Repository</summary>
+        <description>Official repository of jamal2362's edited skins.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon>

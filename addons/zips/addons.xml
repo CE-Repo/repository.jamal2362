@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="plugin.video.composite_for_plex" name="Composite" version="15.0.2" provider-name="anxdpanic">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1" />
+        <import addon="script.module.requests" version="2.12.4" />
+        <import addon="script.module.pyxbmct" version="1.2.0" />
+        <import addon="script.module.infotagger" version="0.0.5" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/entry_point.py">
+        <provides>video audio image</provides>
+        <medialibraryscanpath content="movies">library/movies/</medialibraryscanpath>
+        <medialibraryscanpath content="tvshows">library/tvshows/</medialibraryscanpath>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/service_entry_point.py" />
+    <extension point="xbmc.python.script" library="resources/lib/entry_point.py" />
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <menu>
+                <label>Composite</label>
+                <item library="resources/lib/composite_addon/context_menu_transcoded.py">
+                    
+                    <label>30086</label>
+                    <visible>[Window.IsActive(10000) | Window.IsActive(10025)] + String.IsEmpty(Container.PluginName) + String.StartsWith(ListItem.FileNameAndPath,plugin://plugin.video.composite_for_plex/) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                </item>
+                <item library="resources/lib/composite_addon/context_menu_watched.py">
+                    
+                    <label>30792</label>
+                    <visible>[Window.IsActive(10000) | Window.IsActive(10025)] + String.IsEmpty(Container.PluginName) + String.StartsWith(ListItem.FileNameAndPath,plugin://plugin.video.composite_for_plex/) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                </item>
+                <item library="resources/lib/composite_addon/context_menu_unwatched.py">
+                    
+                    <label>30793</label>
+                    <visible>[Window.IsActive(10000) | Window.IsActive(10025)] + String.IsEmpty(Container.PluginName) + String.StartsWith(ListItem.FileNameAndPath,plugin://plugin.video.composite_for_plex/) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                </item>
+            </menu>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.png</fanart>
+        </assets>
+        <news>
+[fix] leftover kodi-six imports
+[lang] update translations from Weblate
+        </news>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <source>https://github.com/anxdpanic/plugin.video.composite_for_plex</source>
+        <forum>https://composite.panicked.xyz/forum</forum>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <description lang="de_DE">Durchsuchen und Abspielen von Videos, Musik und Fotos, die vom Plex Media Server verwaltet werden.[CR][CR]Fork von Hippojay's PleXBMC</description>
+        <description lang="en_GB">Browse and play video, music and photo media files managed by Plex Media Server.[CR][CR]Fork of PleXBMC by Hippojay</description>
+        <description lang="es_ES">Explorar y reproducir archivos multimedia de vídeo, música y fotos gestionados por Plex Media Server.[CR][CR]Bifurcación de PleXBMC por Hippojay</description>
+        <description lang="es_MX">Explora y reproduce multimedia tal como video, música y e imágenes administrados por Plex Media Server.[CR][CR]Fork de PleXBMC por Hippojay</description>
+        <description lang="fi_FI">Selaa ja toista video-, musiikki- ja kuvamediatiedostoja, joita Plex Media Server hallinnoi.[CR][CR]kehittäjän Hippojay PleXBMC-kehityshaara</description>
+        <description lang="it_IT">Sfoglia e riproduci video, musica e foto gestiti da Plex Media Server.[CR][CR]Fork di PleXBMC di Hippojay</description>
+        <description lang="pl_PL">Przeglądaj i odtwarzaj pliki multimedialne zarządzane przez Plex Media Server.[CR] [CR] Jest to fork PleXBMC stworzonego przez Hippojay'a</description>
+        <description lang="vi_VN">Duyệt và phát các tập tin đa phương tiện video, nhạc và ảnh do Plex Media Server quản lý.[CR][CR]Fork of PleXBMC by Hippojay</description>
+        <disclaimer lang="de_DE">Composite ist KEIN offizielles Plex-Addon und wird von Plex weder unterstützt noch gebilligt.</disclaimer>
+        <disclaimer lang="en_GB">Composite is NOT an official Plex add-on and is not supported or endorsed by Plex.</disclaimer>
+        <disclaimer lang="es_ES">Composite NO es un add-on oficial de Plex y no está apoyado ni respaldado por Plex.</disclaimer>
+        <disclaimer lang="es_MX">Composite NO es un complemento oficial de Plex y no tiene soporte o respaldo por parte de Plex.</disclaimer>
+        <disclaimer lang="fi_FI">Composite ei ole virallinen Plex-lisäosa, eikä Plex tue tai suosittele sen käyttöä.</disclaimer>
+        <disclaimer lang="it_IT">Composite NON è un add-on ufficiale di Plex e non è supportato o approvato da Plex.</disclaimer>
+        <disclaimer lang="pl_PL">Composite NIE jest oficjalnym dodatkiem do programu Plex, nie jest wspierany ani zatwierdzany przez firmę Plex.</disclaimer>
+        <disclaimer lang="vi_VN">Composite KHÔNG phải là một tiện ích chính thức của Plex và không được Plex hỗ trợ hoặc xác nhận.</disclaimer>
+    </extension>
+</addon><addon id="plugin.video.gronkhtv" name="Gronkh.tv" version="1.5.0" provider-name="jamal2362">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.inputstreamhelper" version="0.6.1" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>de</language>
+        <summary lang="en_GB">Watch videos from Gronkh.tv!</summary>
+        <summary lang="de_DE">Schau dir Videos auf Gronkh.tv an!</summary>
+        <description lang="en_GB">Gronkh.tv is an online video streaming service that provides access to the stream archive of Gronkh and potentially other Let's Players.</description>
+        <description lang="de_DE">Gronkh.tv ist ein Online-Video-Streamingdienst, der Zugang zum Stream-Archiv von Gronkh und potenziell auch anderen Let's Playern bietet.</description>
+        <license>GNU Affero General Public License, v3</license>
+        <website>https://gronkh.tv/</website>
+        <source>https://github.com/jamal2362/plugin.video.gronkhtv</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="plugin.video.themoviedb.helper" version="6.12.10" name="TMDb Helper" provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.1" />
+  <import addon="script.module.requests" version="2.9.1" />
+  <import addon="script.module.pil" version="1.1.7" />
+  <import addon="script.module.addon.signals" version="0.0.6" />
+  <import addon="script.module.jurialmunkey" version="0.2.29" />
+  <import addon="script.module.infotagger" version="0.0.5" />
+  <import addon="script.module.qrcode" version="6.1.0" />
+</requires>
+<extension point="xbmc.python.pluginsource" library="resources/plugin.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.python.script" library="resources/script.py" />
+<extension point="xbmc.service" library="resources/service.py" />
+<extension point="xbmc.python.module" library="resources/modules" />
+<extension point="xbmc.addon.metadata">
+  <reuselanguageinvoker>false</reuselanguageinvoker>
+  <summary lang="de_DE">TMDb Helfer</summary>
+  <summary lang="en_GB">TMDb Helper</summary>
+  <summary lang="zh_CN">TMDb 助手</summary>
+  <description lang="de_DE">TMDb Helper liefert Details über Filme, Fernsehsendungen und Schauspieler aus TMDb. Benutzer können auf eine Vielzahl von Listen aus TMDb TVDb MDbList und Trakt zugreifen.</description>
+  <description lang="en_GB">TMDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb TVDb MDbList and Trakt.</description>
+  <description lang="sv_SE">TMDb Helper tillhandahåller information om filmer, tv-serier och skådespelare från TMDb. Användare kan få tillgång till en mängd olika listor från TMDb, TVDb, MDbList och Trakt.</description>
+  <description lang="zh_CN">TMDb 助手从 TMDb（影视数据库） 获取电影、电视剧及演员的详细信息。用户可访问来自 TMDb、TVDb、MDbList 和 Trakt 的各类影视列表。</description>
+  <disclaimer lang="de_DE">Daten bereitgestellt von TMDb TVDb MDbList OMDb FanartTV und Trakt. Einige der Informationen werden von TheTVDB.com bereitgestellt. Bitte erwäge sie zu unterstützen. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="en_GB">Data provided by TMDb TVDb MDbList OMDb FanartTV and Trakt. Some of the information is provided by TheTVDB.com. Please consider supporting them. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="sv_SE">Data tillhandahållen av TMDb TVDb MDbList OMDb FanartTV och Trakt. En del av informationen tillhandahålls av TheTVDB.com. Stöd dem gärna. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="zh_CN">数据由 TMDb、TVDb、MDbList、OMDb、FanartTV 和 Trakt 提供。部分信息由 TheTVDB.com 提供，建议您支持他们。订阅链接：https://thetvdb.com/subscribe</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <website>https://github.com/jurialmunkey/plugin.video.themoviedb.helper</website>
+  <forum>https://forum.kodi.tv/showthread.php?tid=345847</forum>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    <clearlogo>clearlogo.png</clearlogo>
+    <screenshot>resources/screenshot-01.jpg</screenshot>
+    <screenshot>resources/screenshot-02.jpg</screenshot>
+  </assets>
+</extension>
+</addon><addon id="repository.jamal2362" name="Jamal2362 Repository" version="3.0" provider-name="jamal2362">
+    <extension point="xbmc.addon.repository" name="Jamal2362 Repository">
+        <dir minversion="21.0.0">
+            <info compressed="false">https://raw.githubusercontent.com/CE-Repo/repository.jamal2362/main/addons/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/CE-Repo/repository.jamal2362/main/addons/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/CE-Repo/repository.jamal2362/main/addons/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Jamal2362 Repository</summary>
+        <description>Official repository of jamal2362's edited skins.</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="resource.font.robotocjksc" name="Roboto CJKSC" version="0.0.3" provider-name="jurialmunkey">
+    <requires>
+        <import addon="kodi.resource" version="1.0.0" />
+    </requires>
+    
+    <extension point="kodi.resource.font" compile="false" />
+    
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Roboto CJKSC fonts</summary>
+        <description lang="en_GB" />
+        <language />
+        <platform>all</platform>
+        <license>Apache-2.0</license>
+        <forum />
+        <email />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="resource.language.de_de" version="11.0.900" name="German" provider-name="Team Kodi, jamal2362">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0" />
+  </requires>
+  <extension point="kodi.resource.language" locale="de_DE">
+    <charsets>
+      <gui unicodefont="false">CP1252</gui>
+      <subtitle>CP1252</subtitle>
+    </charsets>
+    <sorttokens>
+      <token>The</token>
+      <token>Der</token>
+      <token>Die</token>
+      <token>Das</token>
+    </sorttokens>
+  </extension>
+  <extension point="kodi.addon.metadata">
+    <summary lang="en_GB">German language pack for CE, CPM and avdvplus</summary>
+    <description lang="en_GB">German version of all texts used in Kodi for CE, CPM and avdvplus.</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="screensaver.matrix" name="Matrix" version="1.2.0" provider-name="jamal2362">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+	</requires>
+	<extension point="xbmc.ui.screensaver" library="entrypointscreensaver.py" />
+	<extension point="xbmc.python.script" library="entrypointscript.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<license>GPL-3.0-or-later</license>
+		<source>https://github.com/jamal2362/screensaver.matrix</source>
+		<summary lang="en_GB">Matrix screensaver in Kodi</summary>
+		<summary lang="de_DE">Matrix-Bildschirmschoner in Kodi</summary>
+		<description lang="en_GB">This screensaver addon provides Matrix screensavers in Kodi</description>
+		<description lang="de_DE">Dieses Bildschirmschoner-Addon bietet Matrix-Bildschirmschoner in Kodi</description>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+		</assets>
+	</extension>
+</addon><addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.2.29">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.requests" version="2.9.1" />
+    <import addon="script.module.infotagger" version="0.0.5" />
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en_GB">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.jurialmunkey</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.3" provider-name="marcelveldt,sualfred and others">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.pil" version="1.1.7" />
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+		<description lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<platform>all</platform>
+		<license>GPL-2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon><addon id="script.skinvariables" version="2.1.34" name="Skin Variables" provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.0" />
+  <import addon="script.module.jurialmunkey" version="0.2.28" />
+  <import addon="script.module.infotagger" version="0.0.5" />
+</requires>
+<extension point="xbmc.python.script" library="script.py" />
+<extension point="xbmc.python.pluginsource" library="plugin.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">Skin Variables helps skinners to construct variables and expressions for multiple containers and listitems using a template</summary>
+  <summary lang="fr_FR">Skin Variables aide les skinners à créer des variables et des expressions pour plusieurs conteneurs et listes à l'aide d'un modèle</summary>
+  <description lang="en_GB">Skin Variables helps skinners to construct variables and expressions for multiple containers and listitems using a template</description>
+  <description lang="fr_FR">Skin Variables aide les skinners à créer des variables et des expressions pour plusieurs conteneurs et listes à l'aide d'un modèle</description>
+  <disclaimer lang="en_GB">For skinners</disclaimer>
+  <disclaimer lang="fr_FR">Pour les skinners</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
+</addon><addon id="script.texturemaker" version="0.2.11" name="Texture Maker" provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.0" />
+  <import addon="script.module.pil" version="1.1.7" />
+  <import addon="script.module.jurialmunkey" version="0.2.28" />
+</requires>
+<extension point="xbmc.python.script" library="script.py" />
+<extension point="xbmc.python.pluginsource" library="plugin.py">
+  <provides>image</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">Texture Maker helps skinners build gradient based textures</summary>
+  <description lang="en_GB">Texture Maker helps skinners build gradient based textures</description>
+  <disclaimer lang="en_GB">For skinners</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
+</addon><addon id="script.wikipedia" version="4.0.8" name="Wikipedia" provider-name="jurialmunkey, jamal2362">
+<requires>
+  <import addon="xbmc.python" version="3.0.0" />
+  <import addon="script.module.beautifulsoup4" version="4.9.3" />
+  <import addon="script.module.jurialmunkey" version="0.1.1" />
+</requires>
+<extension point="xbmc.python.script" library="resources/script.py" />
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">Access Wikipedia via Kodi</summary>
+  <description lang="en_GB">Access Wikipedia via Kodi</description>
+  <summary lang="de_DE">Zugriff auf Wikipedia über Kodi</summary>
+  <description lang="de_DE">Zugriff auf Wikipedia über Kodi</description>
+  <license>GPL-3.0-or-later</license>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
+</addon><addon id="skin.arctic.fuse.2" name="Arctic Fuse 2 (Hybrid)" provider-name="jurialmunkey, jamal2362" version="80.2.12.12">
+    <requires>
+        <import addon="xbmc.gui" version="5.17.0" />
+        <import addon="script.skinvariables" version="2.1.28" />
+        <import addon="script.texturemaker" version="0.2.9" />
+        <import addon="plugin.video.themoviedb.helper" version="6.12.1" />
+        <import addon="resource.images.weathericons.white" version="0.0.1" />
+        <import addon="resource.images.studios.coloured" version="0.0.1" />
+        <import addon="resource.font.robotocjksc" version="0.0.3" />
+    </requires>
+    <extension debugging="false" defaultthemename="Textures.xbt" effectslowdown="1" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="1080i" width="1920" height="1080" />
+        <res aspect="3:2" default="false" folder="1080i" width="1620" height="1080" />
+        <res aspect="4:3" default="false" folder="1080i" width="1440" height="1080" />
+        <res aspect="16:10" default="false" folder="1080i" width="1728" height="1080" />
+        <res aspect="17:9" default="false" folder="1080i" width="2040" height="1080" />
+        <res aspect="21:9" default="false" folder="1080i" width="2520" height="1080" />
+        <res aspect="19.5:9" default="false" folder="1080i" width="2340" height="1080" />
+        <res aspect="18:9" default="false" folder="1080i" width="2160" height="1080" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">A minimal row based skin</summary>
+        <description lang="en">Arctic Fuse 2 is a minimal row based skin with customisable widgets</description>
+        <platform>all</platform>
+        <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
+        <forum />
+        <source />
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="skin.arctic.zephyr.mod" version="40.3.0.3" name="Arctic: Zephyr - Reloaded (Hybrid)" provider-name="jurialmunkey, beatmasterrs, jamal2362">
+    <requires>
+        <import addon="xbmc.gui" version="5.17.0" />
+        <import addon="script.skinshortcuts" version="0.4.0" />
+        <import addon="script.globalsearch" version="5.0.0" />
+        <import addon="script.image.resource.select" version="0.0.5" />
+        <import addon="resource.images.weathericons.white" version="0.0.6" />
+        <import addon="script.embuary.info" version="0.0.1" />
+        <import addon="script.embuary.helper" version="1.2.14" />
+        <import addon="plugin.video.themoviedb.helper" version="0.0.1" />
+    </requires>
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>Creative Commons Non Commercial 3.0 License</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=337862</forum>
+        <source>https://github.com/beatmasterRS/skin.arctic.zephyr.mod</source>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshot-01.jpg</screenshot>
+            <screenshot>resources/screenshot-02.jpg</screenshot>
+            <screenshot>resources/screenshot-03.jpg</screenshot>
+            <screenshot>resources/screenshot-04.jpg</screenshot>
+            <screenshot>resources/screenshot-05.jpg</screenshot>
+            <screenshot>resources/screenshot-06.jpg</screenshot>
+            <screenshot>resources/screenshot-07.jpg</screenshot>
+            <screenshot>resources/screenshot-08.jpg</screenshot>
+            <screenshot>resources/screenshot-09.jpg</screenshot>
+            <screenshot>resources/screenshot-10.jpg</screenshot>
+        </assets>
+        <news>3.0.3[CR]- Fixed issue with tv show indicators[CR][CR]3.0.2[CR]- Added preshow experience support[CR]- Language updates[CR][CR]3.0.1[CR]- Minor adjustments[CR]- Language updates[CR][CR]3.0.0[CR]- Kodi Omega version[CR][CR]2.0.5[CR]- Fixed possible issue with media flags[CR]- Added wikipedia script support[CR]- Added option to use keyart instead of poster[CR]- Jumpbar improvements[CR]- Code improvements[CR]- Minor adjustments[CR][CR]2.0.4[CR]- Minor adjustments[CR]- Language updates[CR][CR]2.0.3[CR]- Improved animations[CR]- Changed first start settings[CR]- Added imdb rating (!thx mkaflowski)[CR]- Added missing media flags (!thx derMaik)[CR]- Enabled now playing controls by default[CR]- Added filesize to list views (!thx Nanomani, robertlaing)[CR]- Improved skin settings (!thx derMaik)[CR]- Improved now playing info[CR]- Changed osd and now playing lists to kodi defaults[CR]- Added fanart for albums to dialogmusicinfo[CR]- Added info action to now playing info[CR]- Changes rating color to match osd rating color[CR]- Skin settings cleanup[CR]- Code improvements to icon media flags[CR]- Added onclick action to open tmdb info (!thx Nanomani)[CR]- Fixed music player rating[CR]- Code cleanup[CR]- Fixed issue with lyrics[CR]- Fixed issue with color palette[CR]- Fixed auto scroll issue[CR]- Fixed code (!thx VSeryi)[CR][CR]2.0.2[CR]- Improved media flags (!thx @Nanomani)[CR]- Added setting to use thumb instead of fanart for background on episodes[CR]- Strings update to artwork in skin shortcuts[CR]- Improved indicators[CR]- Fixed extra fanart in music section and widgets fade animation (!thx @Nanomani)[CR]- Fixed issue with duration in some cases[CR]- Improved lyrics and background[CR]- Fixed issue with indicators (!thx semool)[CR][CR]2.0.1[CR]- Improved settings category[CR]- Improved pvr artwork (!thx kalle2000)[CR]- Fixed issue with pvr views[CR]- Replaced old matrix boolean condition[CR]- Added season number to wide episodes view (!thx sPOiDar)[CR]- Fixed issue with screen calibration[CR][CR]2.0.0[CR]- Removed color picker addon support[CR]- Added color picker dialog support[CR]- Added new hdr type infolabels[CR][CR]1.1.72[CR]- Added color presets[CR]- Fixed issues with now playing widget[CR]- Fixed aspect ratio for some icons[CR]- Changed home menu icon size[CR]- Added option to show info for a few seconds, when video starts[CR]- Improvements to dialog subtitles[CR][CR]1.1.71[CR]- Added option to hide ratings in list views[CR]- CjK font added (!thx kuroehanako)[CR]- Added support for extended pvr artwork (!thx kalle2000)[CR]- Minor adjustments[CR]- Language updates[CR][CR]1.1.70[CR]- Improved fsk ratings (!thx Peiren85)[CR]- Fixed issues[CR]- Minor adjustments[CR][CR]1.1.69[CR]- Minor adjustments[CR]- Code cleanup[CR][CR]1.1.68[CR]- Improved skin shortcuts implementation[CR]- Improved widget info for episodes[CR]- Fixed issues[CR]- Code cleanup[CR][CR]1.1.67[CR]- Improved skin performance[CR]- Added option for always visible controls in extended now playing info[CR]- Fixed issues[CR]- Code improvements, cleanup[CR][CR]1.1.66[CR]- Improved extended now playing info[CR]- Minor adjustments to furniture icons[CR][CR]1.1.65[CR]- Improved overall experience[CR]- Improved star rating[CR]- Added support for animated artwork module (!thx PvD)[CR]- Improved textbox autoscroll function (!thx manfeed)[CR]- Fixed issues[CR]- Code improvements, cleanup[CR][CR]1.1.64[CR]- Improved extended now playing info[CR]- Improved auto playing trailers[CR]- Added just watch icon[CR]- Fixed issue with jumpbar[CR]- Improved overall experience[CR]- Improved textures, cleanup[CR]- Improved code, cleanup[CR]- Added lower percentage values for netflix window[CR][CR]1.1.63[CR]- Improved animations[CR]- Improved extended now playing[CR]- Improved OSD code[CR]- Improved overall experience[CR]- Fixed issues[CR][CR]1.1.62[CR]- Fixed issues with clearlogo and pvr osd[CR]- Added option for is playing indicator[CR]- Added option to use embuary helper for blur[CR]- Improved view 520[CR]- Minor adjustments[CR][CR]1.1.61[CR]- Improved container types[CR]- Improved widget information for episodes[CR]- Added indicators to featured home menu layout[CR]- Added additional music flags[CR]- Code improvements, cleanup[CR][CR]1.1.60[CR]- Improved overall experience[CR]- Fixed issues[CR]- Added EDL markers[CR]- Improved code, cleanup[CR]- Added option to ignore embedded fanart by addons (!thx Nanomani)[CR][CR]1.1.59[CR]- Added auto playing trailers[CR]- Improved home menu widgets movement[CR]- Added jumpbar to views 510, 521, 522, 523, 527[CR]- Fixed issues[CR][CR]1.1.58[CR]- Added glow/zoom option for focused items[CR]- Added new view 527[CR]- Improvements to home header (!thx Nanomani)[CR]- Fixed issues[CR][CR]1.1.57[CR]- Fixed issues[CR]- Minor improvements (!thx Nanomani)[CR][CR]1.1.56[CR]- Improvements to music osd[CR]- Improved overall usability/user experience[CR]- Updated translations[CR]- Improvements to colorpicker window, video osd and animations[CR]- Addon icon updated[CR]- Added option to flix views to disable netflix fanart window[CR]- Litebox script is now used for effects like blur, twotone or pixelate[CR]- Improved addon description and summary[CR]- Issues fixed, code cleanup[CR][CR]1.1.55[CR]- Addon infos changed[CR]- First start options set[CR][CR]1.1.54[CR]- Improvements to nowplaying info[CR]- First start options set[CR]- Music visualisation improved[CR]- Rearranged power menu items[CR]- Code improvements, cleanup[CR]- Texture update[CR][CR]1.1.53[CR]- French language update (!thx Nanomani)[CR]- Core/LibreElec settings rework (!thx Nanomani)[CR]- Improved animations[CR]- Background issues fixed[CR]- Improved nowplaying/musicvisualisation/musicosd[CR]- Improved skin settings[CR]- German language update[CR]- Code improvements, cleanup[CR][CR]1.1.52[CR]- Fixed a lot of issues[CR]- Improved performance[CR]- Language strings corrections[CR]- Improved DialogInfo animations[CR]- Added option to enable lock of skin theme/color/font[CR]- Texture update[CR]- Code cleanup[CR][CR]1.1.51[CR]- Rework on skin settings (!thx Nanomani)[CR]- Added support for colorbox script[CR]- Fixed a lot of issues[CR]- Minor adjustments[CR]- Code improvements[CR]- Added coreelec/libreelec icons (!thx Nanomani)[CR]- Fixed clearlogo position (!thx Fabricio Augusto)[CR]- Added wip option to lock skin theme/color[CR]- Added m4a icons[CR][CR]1.1.50[CR]- Fixed issues with language strings (!thx Nanomani)[CR]- Fixed issue with background[CR]- Added option to hide scrollbar for more views (!thx Fabricio Augusto)[CR]- Added option for underline items in vertical multi widgets home menu (!thx Nanomani)[CR][CR]1.1.49[CR]- Texture update[CR]- Improved netflix preview window[CR][CR]1.1.48[CR]- Fixed issue with background[CR]- Minor adjustments[CR]- Code optimization[CR][CR]1.1.47[CR]-Improved widget animations for netflix and clean/minimal layouts[CR]- Fixed an issue with weather background[CR]- Added playdisc shortcut to home menu[CR]- Added audiostreams info to furniture icons[CR]- Code optimization[CR][CR]1.1.46[CR]- Added new home menu layout[CR]- Fixed issue with background[CR]- Fixed issue with language strings (!thx Nanomani)[CR]- French language update (!thx Nanomani)[CR][CR]1.1.45[CR]- Fixed issue with background (!thx Skyla)[CR][CR]1.1.44[CR]- Added brightness setting for background/blur[CR]- Improved some skin settings[CR]- Added fading time setting for background[CR]- Added option to use thumbnail instead fanart in upnext addon[CR]- Added new viewtypes for widgets[CR]- Fixed issues[CR]- Added view 526 for seasons[CR]- German, italian language update (!thx semool, nanomani)[CR][CR]1.1.43[CR]- Added new viewtype aspect for home menu widgets[CR]- Fixed a lot of issues, e.g. musicvideos flags, strings, ...[CR]- Code improvements[CR]- Minor adjustments[CR][CR]1.1.42[CR]- Added new default mpaa flags[CR]- Improvements to DialogAddonInfo[CR]- Italian language updated (!thx Zurg)[CR]- Added option to enable IMDB position[CR]- Added view 524 for seasons[CR]- Improved views content type (!thx Nanomani)[CR]- Fixed minor issue with background[CR]- Added option to hide background of PVR channel icon[CR]- Improved colorpicker dialog[CR]- French language update (!thx Nanomani)[CR]- Added support for artwork downloader in DialogVideoInfo[CR][CR]1.1.41[CR]- Consistency update[CR]- Performance improvements[CR]- Added netflix clearlogo to netflix homemenu viewtypes[CR]- Italian language update (!thx Zurg)[CR]- German language update (!thx semool)[CR]- Fixed a lot of issues[CR]- Improvements to some views[CR]- Code cleanup[CR]- French language update (!thx Nanomani)[CR]- Added option to set fallback image for music visualisation (!thx for request: hordesprime)[CR]- Improvements to DialogPlayerProcessInfo[CR]- Improvements to Video OSD[CR]- Fixed issues with PVR OSD icons[CR][CR]1.1.40[CR]- Added pvr vertical widgets[CR]- Added tagline option for DialogVideoInfo, improvements (!thx Nanomani)[CR]- Added radio channel widgets[CR]- Cleanup the code[CR]- Added option to enable smaller icons in view 510[CR]- Changed list type option to select list type for each widget[CR]- Updated french language[CR]- Updated italian language strings (!thx Zurg)[CR][CR]1.1.39[CR]- Code improvements[CR]- Minor adjustments[CR][CR]1.1.38[CR]- Improved Skinshortcuts menu[CR]- French language updated[CR]- German language updated (!thx semool)[CR]- Fixed issues in PVR section[CR]- Cleanup the code[CR][CR]1.1.37[CR]- Added widgets content[CR]- Issues fixed[CR]- French language updated[CR]- Autoscroll widgets improvements[CR][CR]1.1.36[CR]- Fixed issue with more-item[CR][CR]1.1.35[CR]- Skin settings and viewtype options improvements[CR]- Minor adjustments[CR]- Fixed navigation issues[CR]- New screenshots added[CR]- French language updated[CR][CR]1.1.34[CR]- French language updated (!thx Nanomani)[CR]- Added support for script.arctic.zephyr.mod.autocolors (!thx semool)[CR]- Added music view 523[CR]- Texture improvements[CR][CR]1.1.33[CR]- Bugfix release[CR][CR]1.1.32[CR]- Code improvements, cleanup[CR]- Added new watched flag indicators[CR]- Language strings updates (!thx semool, Dis90)[CR]- Added by director info to dialogvideoinfo[CR]- Minor adjustments[CR][CR]1.1.31[CR]- Improvements of music OSD[CR]- Added option to disable homemenu items in skinshortcuts[CR]- Fixed issues[CR]- Added new views 521/522[CR]- Hungarian language updated (!thx frodo19)[CR][CR]1.1.30[CR]- Removed unneeded textures[CR]- Code cleanup[CR]- Improved custom blur settings[CR]- Added option for autoscroll widget titles[CR]- Fixed issues[CR]- Minor adjustments[CR][CR]1.1.29[CR]- Improved widget diffuse textures[CR]- Removed unneeded textures[CR]- Added option to disable startup window[CR]- Fixed issues[CR]- Added tvshow provider icons to extended infos[CR]- Code cleanup[CR][CR]1.1.28[CR]- Fixed issues with multi backgrounds and background playlists[CR][CR]1.1.27[CR]- Background code improvements[CR]- Added trakt - add to watchlist button[CR]- Code improvements[CR]- fixed issues (!thx)[CR]- minor adjustements[CR][CR]1.1.26[CR]- Fixed a lot of issues[CR]- Added now playing setting[CR]- Code improvements[CR]- Views adjusted for better consistency[CR][CR]1.1.25[CR]- Fixed weather issue[CR][CR]1.1.24[CR]- Added indicator setting[CR]- Fixed playback issue (!thx)[CR]- Code improvements, cleanup[CR]- Added tmdbhelper fallback labels[CR]- Added setting to diable next aired info[CR][CR]1.1.23[CR]- Code improvements, cleanup[CR]- Fixed a lot of issues[CR]- Added option for widgets fade animation [CR]- Added discart for osd [CR]- Added new HDR, DolbyVision and web-dl flags[CR]- Added option to set spotlight widget path[CR]- Added autoscroll for classic widgets[CR]- Enabled extended infos for episodes[CR][CR]1.1.22[CR]- Improvements on plot overlays[CR]- Code and texture improvements, cleanup[CR]- Language strings updated by several contributors, thx![CR][CR]1.1.21[CR]- Code improvements, cleanup[CR]- ColorPicker dialog improvements[CR]- DialogSelect using poster instead icon, if available[CR]- Scrollbar improvements[CR]- Texture improvements[CR]- Option to select media flags added[CR]- Added homemenu viewtype selector[CR]- Minor adjustments of now playing[CR]- Fixed a lot of issues[CR]- Ultra HD Blu Ray icon added[CR]- Language strings updated by several contributors, thx![CR]- Addon is renamed to Arctic: Zephyr - Reloaded[CR]- Added option to hide all indicators[CR]- Added widget 6[CR]- Added custom powermenu[CR][CR]1.1.20[CR]- Added netflix homemenu layout[CR]- Added custom widgets[CR][CR]1.1.19[CR]- Fixed issues, code cleanup[CR]- Improvements on animations[CR]- Added custom coreelec settings[CR][CR]1.1.18[CR]- Code improvements[CR]- Fixed issues[CR][CR]1.1.17[CR]- Improvements on dialoginfo overlay[CR]- Fixed issue with sets info[CR]- Added support for script.skin.info.service[CR][CR]1.1.16[CR]- Widgets cleanup, improvements on supported addons section[CR][CR]1.1.15[CR]- Fixed a lot of issues, cleaned up the code[CR]- Cinema experience support of embuary.helper addon added[CR]- Widgets added[CR]- Now playing info added[CR]- Dialog settings added[CR]- Fixed rating flags[CR]- Improvements on osd/homemenu/views[CR][CR]1.1.14[CR]- Fixed issues[CR][CR]1.1.13[CR]- Texture improvements[CR]- Fixed a lot of issues[CR]- Rework on filemanager[CR]- Added tempo function[CR]- Added new kodi 19 infolabels[CR]- Added german telecast offers support[CR]- Code improvements[CR][CR]1.1.12[CR]- Cleanup the code[CR]- Only icons version added to vertical multi widget homemenu[CR]- Added header label for hubs[CR]- Improvements on color-settings, blur settings[CR]- Switched to tmdbhelper for next aired info[CR]- More changes for matrix compatibility[CR][CR]1.1.1[CR]- First matrix version</news>
+        <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht. Basiert auf dem original Arctic: Zephyr Skin von jurialmunkey.</summary>
+        <summary lang="en">Clean, minimal, elegant, simple, light. Based on the original Arctic: Zephyr skin by jurialmunkey.</summary>
+        <summary lang="en_AU">Clean, minimal, elegant, simple, light. Based on the original Arctic: Zephyr skin by jurialmunkey.</summary>
+        <summary lang="en_US">Clean, minimal, elegant, simple, light. Based on the original Arctic: Zephyr skin by jurialmunkey.</summary>
+        <summary lang="es">Limpio, minimalista, elegante, simple, ligero. Basado en el original Arctic: Zephyr skin por jurialmunkey.</summary>
+        <summary lang="fr">Clair, minimaliste, élégant, simple et léger. Basé sur le skin original Arctic: Zephyr par jurialmunkey.</summary>
+        <summary lang="fr_CA">Net, minimal, élégant, simple, léger. Basé sur le skin original Arctic: Zephyr par jurialmunkey.</summary>
+        <summary lang="lt">Švari, minimali, elegantiška, paprasta, lengva. Basato sull'originale Arctic: Zephyr skin di jurialmunkey.</summary>
+        <summary lang="nl">Schoon, minimaal, elegant, simpel, licht. Gebaseerd op de originele Arctic: Zephyr skin door jurialmunkey.</summary>
+        <summary lang="pl">Prosta, minimalista, elegancka i lekka. Na podstawie oryginalnego skinu Arctic: Zephyr autorstwa jurialmunkey.</summary>
+        <summary lang="ro">Curat, minimalist, elegant, simplu, ușor. Bazat pe pielea originală Arctic: Zephyr de jurialmunkey.</summary>
+        <summary lang="ru">Опрятный, минималистичный, элегантный, простой, светлый. Основано на оригинальном скине Arctic: Zephyr от jurialmunkey.</summary>
+        <description lang="de">Arctic: Zephyr - Reloaded basiert auf dem original Arctic: Zephyr Skin von jurialmunkey und ist ein minimalistisches, klares und simples Interface für deine Medien mit dem gewissen Etwas.</description>
+        <description lang="en">Arctic: Zephyr - Reloaded is based on original Arctic: Zephyr skin, created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="en_AU">Arctic: Zephyr - Reloaded is based on original Arctic: Zephyr skin, created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="en_US">Arctic: Zephyr - Reloaded is based on original Arctic: Zephyr skin, created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="fr">Arctic: Zephyr - Reloaded est basé sur le skin original Arctic: Zephyr, créé par jurialmunkey. Arctic se focalise sur le fait d'être simple, claire et minimaliste.</description>
+    </extension>
+</addon><addon id="skin.pm3-hd" version="30.2.7.3" name="PM3.HD (Hybrid)" provider-name="Jezz_X, TigerbotHesh, qqbenq, Collapsed-TI, jamal2362">
+  <requires>
+    <import addon="xbmc.gui" version="5.17.0" />
+  </requires>
+  <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1.0">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <assets>
+	    <icon>resources/icon.png</icon>
+	    <fanart>resources/fanart.jpg</fanart>
+	    <screenshot>_screenshots/screenshot01.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot02.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot03.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot04.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot05.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot06.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot07.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot08.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot09.jpg</screenshot>
+	    <screenshot>_screenshots/screenshot10.jpg</screenshot>
+    </assets>
+    <summary lang="de">Project Mayhem III High Definition skin by Jezz_X</summary>
+    <summary lang="el">Το κέλυφος Project Mayhem III High Definition από τον Jezz_X</summary>
+    <summary lang="en">Project Mayhem III High Definition skin by Jezz_X</summary>
+    <summary lang="es">Project Mayhem III High Definition skin por Jezz_X</summary>
+    <summary lang="fa_IR">Project Mayhem III پوسته ی HD توسط Jezz_X</summary>
+    <summary lang="fi">Project Mayhem III High Definition -ulkoasun on kehittänyt Jezz_X.</summary>
+    <summary lang="hu">PM3.HD skin (szerző: Jezz_X)</summary>
+    <summary lang="nl">PM3.HD skin door Jezz_X</summary>
+    <summary lang="pl">Projekt Mayhem III HD skóra autorstwa Jezz_X</summary>
+    <summary lang="pt">Tema 'Project Mayhem III High Definition', desenvolvido por Jezz_X</summary>
+    <summary lang="pt_BR">Project Mayhem III High Definition skin por Jezz_X</summary>
+    <description lang="de">PM3.HD (Project Mayhem III High Definition) basiert auf dem Design des alten Standardskins Project Mayhem III von Chokemaniac.[CR][CR]Dieses Skin wurde erstellt als XBMC von der xbox Platform auf PC's überging.   Menschen wollten XBMC auf HD TVs in 720p und 1080p nutzen und es viel mir auf, dass das alte Standardskin Project Mayhem III auf der niedrigen Auflösung der xbox gut aussah, in HD aber pixelig war.   Also wurde PM3.HD erstellt, um die Lücke mit unserer ersten "stable" Veröffentlichung für Linux, OSX und Windows für HD Nutzer zu schließen.</description>
+    <description lang="el">Το PM3.HD (Project Mayhem III High Definition) βασίστηκε στο σχεδιασμό του παλαιότερου κελύφους Project Mayhem III από τον Chokemaniac.[CR][CR]Αυτό το κέλυφος δημιουργήθηκε κατά τη μεταφορά του XBMC από την παιχνιδομηχανή xbox στον Η/Υ.   Καθώς ο κόσμος ήθελε να χρησιμοποιήσει το XBMC στις Υψηλής Ευκρίνειας τηλεοράσεις τους σε αναλύσεις 720p και 1080p, και διαπίστωσα ότι το παλιό κέλυφος Project Mayhem III ακόμα έδειχνε καλό στο χαμηλής ανάλυσης xbox, αλλά η ποιότητα της εικόνας χαλούσε σε υψηλή ανάλυση.    Έτσι δημιουργήθηκε το PM3.HD, προκειμένου να γεμίσει το κενό για χρήστες Υψηλής Ευκρίνειας τηλεοράσεων με την πρώτη επίσημη "σταθερή" έκδοση του XBMC για Linux, OSX και Windows.</description>
+    <description lang="en">PM3.HD (Project Mayhem III High Definition) was based on the design of the old default skin Project Mayhem III by Chokemaniac.[CR][CR]This skin was created as XBMC moved off the xbox platform onto PC's.   People were wanting to use XBMC on High Definition TV in 720p and 1080p and it came to my attention that the old default Project Mayhem III skin looked great on the low resolution xbox but looked very blocky when scaled up to Hi definition.    So PM3.HD was created to fill the gap for High definition users with our first official "stable" release of XBMC for Linux, OSX and Windows.</description>
+    <description lang="fa_IR">PM3.HD (Project Mayhem III با کیفیت بسیار بالا)  در طراحی بر اساس پروژه قدیمی پوسته Project Mayhem III توسط Chokemaniac است. [CR] [CR] این پوست وقتی ساخته شد که XBMC در خارج از پلت فرم ایکس باکس بر روی کامپیوتر نقل مکان کرد. مردم مایل به استفاده از XBMC در تلویزیون با کیفیت بالای 720P و 1080P بوده و من متوجه شدم که پوسته ی قدیمی Project Mayhem III  در رزولوشن پایین بسیار عالی است، اما وقتی به رزولیشن  HD تغییر اندازه دهیم تصاویر خیلی بلوکه شده به نظر می رسد. بنابراین PM3.HD برای پر کردن شکاف برای کاربران HD با اولین ریلیز  "پایدار" از XBMC لینوکس و برای سیستم عامل های لینوکس، OSX و ویندوز ساخته شده است.</description>
+    <description lang="fi">PM3.HD (Project Mayhem III High Definition) perustuu Chokemaniacin vanhaan vakiopiirtotarkkuuden Project Mayhem III -oletusulkoasuun.[CR][CR]PM3.HD luotiin teräväpiirtotelevisioita varten silloin kun XBMC siirtyi Xboxilta PC:lle.</description>
+    <description lang="hu">PM3.HD (Project Mayhem III High Definition) egy régi alapskinre épül (Project Mayhem III, szerző: Chokemaniac).[CR][CR]Ez a skin akkor keletkezett amikor az XBMC átváltott a PC platforma, amikor a felhasználók a nagyfelbontású (720p, 1080p) TV készülékeiken akarták élvezni az XBMC-t. Ez volt az alapskin az első "hivatalos" stabil verzióban a Linux, Windows és OSX platformokon.</description>
+    <description lang="nl">PM3.HD (Project Mayhem III High Definition) is gebaseerd op het design van de oude standaard skin (PM3) door Chokemaniac.[CR]  Deze skin werd ontworpen toen XBMC van het xbox platform naar PC's verhuisde. Mensen wilden toen XBMC gebruiken op HD TVs in 720p en 1080p en de originele PM3 skin werd slecht weergegeven in deze hoge resoluties. Dit lag aan de de basis van de PM3.HD skin</description>
+    <description lang="pt">O tema PM3.HD (Project Mayhem III High Definition) foi baseado no desenho do velho tema padrão do XBMC, 'Project Mayhem III', desenvolvido por Chokemaniac.[CR][CR]Este tema foi criado quando o XBMC deixou de ser desenvolvido para a plataforma xbox.   A comunidade queria usar o XBMC em TVs de alta-definição (720p and 1080p) e chamou à atenção para o facto que o velho tema 'Project Mayhem III' era visualmente agradável na xbox, mas ficava horrível quando usado em aparelhos capazes de alta-definição.    Assim, o tema PM3.HD foi criado para preencher o vazio existente que os utilizadores notaram na primeira versão estável para Linux, OSX e Windows, plataformas já com capacidade para alta-definição.</description>
+    <description lang="pt_BR">PM3.HD (Project Mayhem III High Definition)é baseado no design de antiga  skin Project Mayhem III por Chokemaniac.[CR][CR]Esta skin foi criada quando moveu-se da plataforma xbox para PC's. Pessoas estavam querendo usar o XBMC na TV de alta definição em 720p e 1080p e ele veio ao meu conhecimento que o velho padrão da skin Project Mayhem III parecia perfeita em baixa resolução no xbox, mas parecia muito blocky quando ampliadas para alta definição. Então PM3.HD foi criado para preencher a lacuna para usuários de alta definição.</description>
+    <platform>all</platform>
+  </extension>
+</addon></addons>
