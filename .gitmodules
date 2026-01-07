@@ -22,3 +22,7 @@
 	path = addons/script.skin.helper.colorpicker
 	url = https://github.com/kodi-community-addons/script.skin.helper.colorpicker.git
 	branch = master
+[submodule "addons/script.module.jurialmunkey"]
+	path = addons/script.module.jurialmunkey
+	url = https://github.com/jurialmunkey/script.module.jurialmunkey.git
+	branch = main
