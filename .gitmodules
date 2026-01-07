@@ -50,3 +50,7 @@
 	path = addons/resource.language.de_de
 	url = https://github.com/CE-Repo/resource.language.de_de
 	branch = main
+[submodule "resources/plugin.video.composite_for_plex"]
+	path = resources/plugin.video.composite_for_plex
+	url = https://github.com/CE-Repo/plugin.video.composite_for_plex
+	branch = master
