@@ -14,3 +14,7 @@
 	path = addons/script.texturemaker
 	url = https://github.com/jurialmunkey/script.texturemaker.git
 	branch = main
+[submodule "addons/script.skinvariables"]
+	path = addons/script.skinvariables
+	url = https://github.com/jurialmunkey/script.skinvariables.git
+	branch = nexus
