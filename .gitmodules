@@ -6,3 +6,7 @@
 	path = addons/skin.arctic.zephyr.mod
 	url = https://github.com/CE-Repo/skin.arctic.zephyr.mod.git
 	branch = master
+[submodule "addons/skin.pm3-hd"]
+	path = addons/skin.pm3-hd
+	url = https://github.com/CE-Repo/skin.pm3-hd.git
+	branch = master
