@@ -2,3 +2,7 @@
 	path = addons/skin.arctic.fuse.2
 	url = https://github.com/CE-Repo/skin.arctic.fuse.2.git
 	branch = omega
+[submodule "addons/skin.arctic.zephyr.mod"]
+	path = addons/skin.arctic.zephyr.mod
+	url = https://github.com/CE-Repo/skin.arctic.zephyr.mod.git
+	branch = master
