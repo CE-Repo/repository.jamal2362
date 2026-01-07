@@ -42,3 +42,7 @@
 	path = addons/plugin.video.gronkhtv
 	url = https://github.com/CE-Repo/plugin.video.gronkhtv.git
 	branch = main
+[submodule "addons/script.wikipedia"]
+	path = addons/script.wikipedia
+	url = https://github.com/CE-Repo/script.wikipedia.git
+	branch = main
