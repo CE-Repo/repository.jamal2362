@@ -30,3 +30,7 @@
 	path = addons/resource.font.robotocjksc
 	url = https://github.com/jurialmunkey/resource.font.robotocjksc.git
 	branch = main
+[submodule "addons/plugin.video.themoviedb.helper"]
+	path = addons/plugin.video.themoviedb.helper
+	url = https://github.com/jurialmunkey/plugin.video.themoviedb.helper.git
+	branch = nexus
