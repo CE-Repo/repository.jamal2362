@@ -1,0 +1,4 @@
+[submodule "addons/skin.arctic.fuse.2"]
+	path = addons/skin.arctic.fuse.2
+	url = https://github.com/CE-Repo/skin.arctic.fuse.2.git
+	branch = omega
