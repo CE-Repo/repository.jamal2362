@@ -34,3 +34,7 @@
 	path = addons/plugin.video.themoviedb.helper
 	url = https://github.com/jurialmunkey/plugin.video.themoviedb.helper.git
 	branch = nexus
+[submodule "addons/screensaver.matrix"]
+	path = addons/screensaver.matrix
+	url = https://github.com/CE-Repo/screensaver.matrix.git
+	branch = main
