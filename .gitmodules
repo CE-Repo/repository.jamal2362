@@ -58,3 +58,7 @@
 	path = addons/skin.estuary
 	url = https://github.com/CE-Repo/skin.estuary.git
 	branch = main
+[submodule "addons/skin.rapier"]
+	path = addons/skin.rapier
+	url = https://github.com/CE-Repo/Rapier.git
+	branch = master
