@@ -54,3 +54,7 @@
 	path = addons/resource.language.de_de
 	url = https://github.com/CE-Repo/resource.language.de_de.git
 	branch = main
+[submodule "addons/skin.estuary"]
+	path = addons/skin.estuary
+	url = https://github.com/CE-Repo/skin.estuary.git
+	branch = main
