@@ -66,3 +66,7 @@
 	path = addons/skin.embuary
 	url = https://github.com/CE-Repo/skin.embuary.git
 	branch = master
+[submodule "addons/skin.confluence"]
+	path = addons/skin.confluence
+	url = https://github.com/CE-Repo/skin.confluence.git
+	branch = master
