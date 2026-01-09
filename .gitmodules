@@ -78,3 +78,7 @@
 	path = addons/skin.arctic.horizon.2
 	url = https://github.com/CE-Repo/skin.arctic.horizon.2.git
 	branch = main
+[submodule "addons/skin.aeon.nox.silvo"]
+	path = addons/skin.aeon.nox.silvo
+	url = https://github.com/CE-Repo/skin.aeon.nox.silvo.git
+	branch = omega
