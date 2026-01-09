@@ -82,3 +82,7 @@
 	path = addons/skin.aeon.nox.silvo
 	url = https://github.com/CE-Repo/skin.aeon.nox.silvo.git
 	branch = omega
+[submodule "addons/script.skinhelper"]
+	path = addons/script.skinhelper
+	url = https://github.com/DenDyGH/script.skinhelper.git
+	branch = main
