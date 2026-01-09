@@ -70,3 +70,7 @@
 	path = addons/skin.confluence
 	url = https://github.com/CE-Repo/skin.confluence.git
 	branch = master
+[submodule "addons/skin.arctic.zephyr.2.resurrection.mod"]
+	path = addons/skin.arctic.zephyr.2.resurrection.mod
+	url = https://github.com/CE-Repo/skin.arctic.zephyr.2.resurrection.mod.git
+	branch = main
