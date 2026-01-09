@@ -74,3 +74,7 @@
 	path = addons/skin.arctic.zephyr.2.resurrection.mod
 	url = https://github.com/CE-Repo/skin.arctic.zephyr.2.resurrection.mod.git
 	branch = main
+[submodule "addons/skin.arctic.horizon.2"]
+	path = addons/skin.arctic.horizon.2
+	url = https://github.com/CE-Repo/skin.arctic.horizon.2.git
+	branch = main
