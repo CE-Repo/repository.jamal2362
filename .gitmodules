@@ -86,3 +86,7 @@
 	path = addons/script.skinhelper
 	url = https://github.com/DenDyGH/script.skinhelper.git
 	branch = main
+[submodule "addons/script.skin.helper.skinbackup"]
+	path = addons/script.skin.helper.skinbackup
+	url = https://github.com/kodi-community-addons/script.skin.helper.skinbackup.git
+	branch = master
