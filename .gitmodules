@@ -90,3 +90,7 @@
 	path = addons/script.skin.helper.skinbackup
 	url = https://github.com/kodi-community-addons/script.skin.helper.skinbackup.git
 	branch = master
+[submodule "addons/skin.arctic.fuse.3"]
+	path = addons/skin.arctic.fuse.3
+	url = https://github.com/CE-Repo/skin.arctic.fuse.3.git
+	branch = omega
