@@ -62,3 +62,7 @@
 	path = addons/skin.rapier
 	url = https://github.com/CE-Repo/Rapier.git
 	branch = master
+[submodule "addons/skin.embuary"]
+	path = addons/skin.embuary
+	url = https://github.com/CE-Repo/skin.embuary.git
+	branch = master
