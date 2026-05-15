@@ -4,7 +4,7 @@
 	branch = master
 [submodule "addons/plugin.video.gronkhtv"]
 	path = addons/plugin.video.gronkhtv
-	url = https://github.com/CE-Repo/plugin.video.gronkhtv
+	url = https://github.com/CE-Repo/plugin.video.gronkhtv.git
 	branch = main
 [submodule "addons/plugin.video.themoviedb.helper"]
 	path = addons/plugin.video.themoviedb.helper
@@ -16,7 +16,7 @@
 	branch = main
 [submodule "addons/resource.language.de_de"]
 	path = addons/resource.language.de_de
-	url = https://github.com/CE-Repo/resource.language.de_de
+	url = https://github.com/CE-Repo/resource.language.de_de.git
 	branch = main
 [submodule "addons/screensaver.matrix"]
 	path = addons/screensaver.matrix
