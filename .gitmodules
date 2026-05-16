@@ -38,10 +38,6 @@
 	path = addons/script.tinyppi
 	url = https://github.com/CE-Repo/script.tinyppi.git
 	branch = main
-[submodule "addons/script.wikipedia"]
-	path = addons/script.wikipedia
-	url = https://github.com/CE-Repo/script.wikipedia.git
-	branch = main
 [submodule "addons/skin.arctic.fuse.3"]
 	path = addons/skin.arctic.fuse.3
 	url = https://github.com/CE-Repo/skin.arctic.fuse.3.git
