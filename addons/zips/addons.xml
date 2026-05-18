@@ -287,10 +287,11 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.0.1" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.0.2" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
+	<extension point="xbmc.service" library="kodi_monitor.py" />
     <extension point="xbmc.python.script" library="default.py">
         <provides>executable</provides>
     </extension>
