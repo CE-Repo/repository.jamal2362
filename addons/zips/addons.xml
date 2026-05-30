@@ -287,28 +287,27 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.1.7" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.1.9" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
-	<extension point="xbmc.service" library="kodi_monitor.py" />
-    <extension point="xbmc.python.script" library="default.py">
+    <extension point="xbmc.service" library="resources/lib/monitor.py" />
+    <extension point="xbmc.python.script" library="main.py">
         <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-		<license>GPL-3.0-or-later</license>
-		<source>https://github.com/CE-Repo/script.tinyppi</source>
+        <license>GPL-3.0-or-later</license>
+        <source>https://github.com/CE-Repo/script.tinyppi</source>
         <summary lang="de">Zeigt benutzerdefinierte Prozessinformationen an</summary>
         <summary lang="en">Displays custom player process information</summary>
         <description lang="de">Öffnet ein eigenes Prozessinformationen-Fenster. Dieses enthält Codec-, Video- und Audio-Details zum aktuell abgespielten Medium.</description>
         <description lang="en">Opens a separate process information window. This window displays codec, video, and audio details for the currently playing media.</description>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
+        <assets>
+            <icon>icon.jpg</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
-
 </addon><addon id="script.wikipedia" version="10.0.1.0" name="Wikipedia" provider-name="jurialmunkey, jamal2362">
 <requires>
   <import addon="xbmc.python" version="3.0.0" />
