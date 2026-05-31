@@ -287,7 +287,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.2.0" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.2.1" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -297,7 +297,7 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <license>GPL-3.0-or-later</license>
+        <license>MIT-License</license>
         <source>https://github.com/CE-Repo/script.tinyppi</source>
         <summary lang="de">Zeigt benutzerdefinierte Prozessinformationen an</summary>
         <summary lang="en">Displays custom player process information</summary>
