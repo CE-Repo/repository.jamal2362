@@ -172,7 +172,7 @@
             <icon>icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="resource.language.de_de" version="1.11.0.105" name="German" provider-name="Team Kodi, jamal2362">
+</addon><addon id="resource.language.de_de" version="11.0.505" name="German" provider-name="Team Kodi, jamal2362">
   <requires>
     <import addon="kodi.resource" version="1.0.0" />
   </requires>
@@ -326,7 +326,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (Mod)" provider-name="jurialmunkey, jamal2362" version="6.3.2.9">
+</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (Mod)" provider-name="jurialmunkey, jamal2362" version="7.3.2.9">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.1" />
