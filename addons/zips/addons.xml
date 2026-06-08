@@ -66,12 +66,11 @@
         <disclaimer lang="pl_PL">Composite NIE jest oficjalnym dodatkiem do programu Plex, nie jest wspierany ani zatwierdzany przez firmę Plex.</disclaimer>
         <disclaimer lang="vi_VN">Composite KHÔNG phải là một tiện ích chính thức của Plex và không được Plex hỗ trợ hoặc xác nhận.</disclaimer>
     </extension>
-</addon><addon id="plugin.video.gronkhtv" name="Gronkh.tv" version="1.5.5" provider-name="jamal2362">
+</addon><addon id="plugin.video.gronkhtv" name="Gronkh.tv" version="2.0.0" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.inputstreamhelper" version="0.6.1" />
     </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
+    <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
@@ -79,11 +78,11 @@
         <language>de</language>
         <summary lang="en_GB">Watch videos from Gronkh.tv!</summary>
         <summary lang="de_DE">Schau dir Videos auf Gronkh.tv an!</summary>
-        <description lang="en_GB">Gronkh.tv is an online video streaming service that provides access to the stream archive of Gronkh and potentially other Let's Players.</description>
-        <description lang="de_DE">Gronkh.tv ist ein Online-Video-Streamingdienst, der Zugang zum Stream-Archiv von Gronkh und potenziell auch anderen Let's Playern bietet.</description>
-        <license>GNU Affero General Public License, v3</license>
+        <description lang="en_GB">Gronkh.tv is an online video streaming service providing access to the stream archive of Gronkh and other Let's Players.</description>
+        <description lang="de_DE">Gronkh.tv ist ein Online-Video-Streamingdienst, der Zugang zum Stream-Archiv von Gronkh und anderen Let's Playern bietet.</description>
+        <license>MIT-License</license>
         <website>https://gronkh.tv/</website>
-        <source>https://github.com/jamal2362/plugin.video.gronkhtv</source>
+        <source>https://github.com/CE-Repo/plugin.video.gronkhtv</source>
         <assets>
             <icon>resources/icon.png</icon>
         </assets>
@@ -287,7 +286,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.2.6" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.2.7" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
