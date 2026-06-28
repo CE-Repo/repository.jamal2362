@@ -286,7 +286,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.5.4" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.5.5" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="tools.tinyppi" version="1.0.0" />
@@ -368,7 +368,7 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.0.1" provider-name="jamal2362">
+</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.0.2" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
