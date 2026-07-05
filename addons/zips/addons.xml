@@ -87,7 +87,7 @@
             <icon>resources/icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="plugin.video.themoviedb.helper" version="6.15.8" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="6.16.0" name="TMDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1" />
   <import addon="script.module.requests" version="2.9.1" />
@@ -286,10 +286,10 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.6.1" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.6.4" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
-        <import addon="tools.tinyppi" version="1.0.0" />
+        <import addon="tools.tinyppi" version="1.0.5" />
     </requires>
     <extension point="xbmc.service" library="resources/lib/monitor.py" />
     <extension point="xbmc.python.script" library="main.py">
@@ -328,7 +328,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="9.3.2.11">
+</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="10.3.2.11">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.2" />
@@ -368,7 +368,7 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.0.3" provider-name="jamal2362">
+</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.0.5" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
