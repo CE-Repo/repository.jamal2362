@@ -171,7 +171,7 @@
             <icon>icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="resource.language.de_de" version="11.0.505" name="German" provider-name="Team Kodi, jamal2362">
+</addon><addon id="resource.language.de_de" version="11.0.508" name="German" provider-name="Team Kodi, jamal2362">
   <requires>
     <import addon="kodi.resource" version="1.0.0" />
   </requires>
@@ -286,7 +286,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.6.6" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.6.7" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="tools.tinyppi" version="1.0.6" />
@@ -368,7 +368,7 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.0.6" provider-name="jamal2362">
+</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.0.7" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
