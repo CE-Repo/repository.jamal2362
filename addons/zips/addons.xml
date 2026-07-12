@@ -286,10 +286,10 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.8.2" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.8.6" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
-        <import addon="tools.tinyppi" version="1.0.9" />
+        <import addon="tools.tinyppi" version="1.1.0" />
     </requires>
     <extension point="xbmc.service" library="resources/lib/monitor.py" />
     <extension point="xbmc.python.script" library="main.py">
@@ -328,7 +328,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="12.3.2.13">
+</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="15.3.2.13">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.2" />
@@ -368,7 +368,7 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.0.9" provider-name="jamal2362">
+</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.1.0" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
