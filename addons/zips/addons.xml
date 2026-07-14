@@ -286,10 +286,10 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="1.8.9" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="1.9.5" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
-        <import addon="tools.tinyppi" version="1.1.2" />
+        <import addon="tools.tinyppi" version="1.1.3" />
     </requires>
     <extension point="xbmc.service" library="resources/lib/monitor.py" />
     <extension point="xbmc.python.script" library="main.py">
@@ -368,7 +368,7 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.1.2" provider-name="jamal2362">
+</addon><addon id="tools.tinyppi" name="TinyPPI Tools" version="1.1.3" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
