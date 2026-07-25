@@ -195,15 +195,15 @@
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="screensaver.matrix" name="Matrix" version="1.2.0" provider-name="jamal2362">
+</addon><addon id="screensaver.matrix" name="Matrix" version="2.0.0" provider-name="jamal2362">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
-	<extension point="xbmc.ui.screensaver" library="entrypointscreensaver.py" />
-	<extension point="xbmc.python.script" library="entrypointscript.py">
+	<extension point="xbmc.ui.screensaver" library="resources/lib/entrypoints/screensaver_entry.py" />
+	<extension point="xbmc.python.script" library="resources/lib/entrypoints/script_entry.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" />
+	<extension point="xbmc.service" library="resources/lib/entrypoints/service_entry.py" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<license>GPL-3.0-or-later</license>
@@ -213,12 +213,8 @@
 		<description lang="en_GB">This screensaver addon provides Matrix screensavers in Kodi</description>
 		<description lang="de_DE">Dieses Bildschirmschoner-Addon bietet Matrix-Bildschirmschoner in Kodi</description>
 		<assets>
-			<icon>icon.png</icon>
+			<icon>icon.jpg</icon>
 			<fanart>fanart.jpg</fanart>
-			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
 		</assets>
 	</extension>
 </addon><addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.2.35">
