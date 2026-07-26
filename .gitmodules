@@ -46,3 +46,7 @@
 	path = addons/tools.tinyppi
 	url = https://github.com/CE-Repo/tools.tinyppi.git
 	branch = main
+[submodule "addons/plugin.video.pyplexer"]
+	path = addons/plugin.video.pyplexer
+	url = https://github.com/CE-Repo/plugin.video.pyplexer.git
+	branch = main
