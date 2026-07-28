@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tinyppi" name="TinyPPI" version="2.0.8" provider-name="jamal2362">
+<addon id="script.tinyppi" name="TinyPPI" version="2.0.9" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="tools.tinyppi" version="1.1.6"/>
+        <import addon="tools.tinyppi" version="1.1.7"/>
     </requires>
     <extension point="xbmc.service" library="resources/lib/service/monitor.py" />
     <extension point="xbmc.python.script" library="main.py">
@@ -15,9 +15,11 @@
         <summary lang="de">Zeigt benutzerdefinierte Prozessinformationen an</summary>
         <summary lang="en">Displays custom player process information</summary>
         <summary lang="zh">显示自定义播放器进程信息</summary>
+        <summary lang="ar">يعرض معلومات مخصصة عن عملية المشغل</summary>
         <description lang="de">Öffnet ein eigenes Prozessinformationen-Fenster. Dieses enthält Codec-, Video- und Audio-Details zum aktuell abgespielten Medium.</description>
         <description lang="en">Opens a separate process information window. This window displays codec, video, and audio details for the currently playing media.</description>
         <description lang="zh">打开一个独立的进程信息窗口。此窗口显示当前播放媒体的编解码器、视频和音频详细信息。</description>
+        <description lang="ar">يفتح نافذة مستقلة لمعلومات العملية. تعرض هذه النافذة تفاصيل برنامج الترميز (Codec) والفيديو والصوت الخاصة بالوسائط التي يتم تشغيلها حاليًا.</description>
         <assets>
             <icon>icon.jpg</icon>
             <fanart>fanart.jpg</fanart>
