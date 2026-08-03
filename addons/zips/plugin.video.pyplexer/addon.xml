@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.pyplexer" name="PyPlexer" version="2.1.5" provider-name="jamal2362">
+<addon id="plugin.video.pyplexer" name="PyPlexer" version="2.2.1" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.12.4"/>
@@ -17,20 +17,40 @@
         <menu id="kodi.core.main">
             <menu>
                 <label>PyPlexer</label>
+                <item library="resources/lib/context_actions/open_folder.py">
+                    <!-- Open folder -->
+                    <label>30840</label>
+                    <visible>Window.IsVisible(home) + [!String.IsEmpty(ListItem.Property(PyPlexer.FolderUrl)) | !String.IsEmpty(ListItem.Property(PyPlexer.WatchlistRatingKey))]</visible>
+                </item>
                 <item library="resources/lib/context_actions/play_transcoded.py">
-                    <!-- Play Transcoded -->
+                    <!-- Transcoding -->
                     <label>30086</label>
-                    <visible>[Window.IsActive(10000) | Window.IsActive(10025)] + String.IsEmpty(Container.PluginName) + String.StartsWith(ListItem.FileNameAndPath,plugin://plugin.video.pyplexer/) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                    <visible>String.IsEqual(ListItem.Property(PyPlexer.CanTranscode),true) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
                 </item>
                 <item library="resources/lib/context_actions/mark_watched.py">
                     <!-- Mark as watched -->
                     <label>30792</label>
-                    <visible>[Window.IsActive(10000) | Window.IsActive(10025)] + String.IsEmpty(Container.PluginName) + String.StartsWith(ListItem.FileNameAndPath,plugin://plugin.video.pyplexer/) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                    <visible>String.IsEqual(ListItem.Property(PyPlexer.CanMarkWatched),true) + !String.IsEqual(ListItem.Property(PyPlexer.Watched),true) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
                 </item>
                 <item library="resources/lib/context_actions/mark_unwatched.py">
                     <!-- Mark as unwatched -->
                     <label>30793</label>
-                    <visible>[Window.IsActive(10000) | Window.IsActive(10025)] + String.IsEmpty(Container.PluginName) + String.StartsWith(ListItem.FileNameAndPath,plugin://plugin.video.pyplexer/) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                    <visible>String.IsEqual(ListItem.Property(PyPlexer.CanMarkWatched),true) + String.IsEqual(ListItem.Property(PyPlexer.Watched),true) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                </item>
+                <item library="resources/lib/context_actions/add_to_watchlist.py">
+                    <!-- Add to Watchlist -->
+                    <label>30818</label>
+                    <visible>!String.IsEmpty(ListItem.Property(PyPlexer.WatchlistRatingKey)) + !String.IsEqual(ListItem.Property(PyPlexer.Watchlisted),true) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]</visible>
+                </item>
+                <item library="resources/lib/context_actions/remove_from_watchlist.py">
+                    <!-- Remove from Watchlist -->
+                    <label>30819</label>
+                    <visible>!String.IsEmpty(ListItem.Property(PyPlexer.WatchlistRatingKey)) + String.IsEqual(ListItem.Property(PyPlexer.Watchlisted),true) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]</visible>
+                </item>
+                <item library="resources/lib/context_actions/toggle_external_watchlist.py">
+                    <!-- Toggle "Add/Remove from Watchlist" for items from other services -->
+                    <label>30839</label>
+                    <visible>String.IsEmpty(ListItem.Property(PyPlexer.WatchlistRatingKey)) + [!String.IsEmpty(ListItem.UniqueID(tmdb)) | !String.IsEmpty(ListItem.UniqueID(imdb)) | !String.IsEmpty(ListItem.UniqueID(tvdb)) | !String.IsEmpty(ListItem.Property(tmdb_id)) | !String.IsEmpty(ListItem.Property(imdb_id)) | !String.IsEmpty(ListItem.Property(tvdb_id)) | !String.IsEmpty(ListItem.Property(item.tmdb_id)) | !String.IsEmpty(ListItem.Property(item.imdb_id)) | !String.IsEmpty(ListItem.Property(item.tvdb_id)) | !String.IsEmpty(ListItem.Property(tmdb)) | !String.IsEmpty(ListItem.Property(imdb)) | !String.IsEmpty(ListItem.Property(tvdb)) | String.Contains(ListItem.FileNameAndPath,tmdb_id=) | String.Contains(ListItem.FileNameAndPath,imdb_id=) | String.Contains(ListItem.FileNameAndPath,tvdb_id=)] + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]</visible>
                 </item>
             </menu>
         </menu>
