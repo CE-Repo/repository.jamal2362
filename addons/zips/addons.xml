@@ -20,7 +20,7 @@
             <icon>resources/icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="plugin.video.pyplexer" name="PyPlexer" version="2.2.3" provider-name="jamal2362">
+</addon><addon id="plugin.video.pyplexer" name="PyPlexer" version="2.3.1" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.12.4" />
@@ -57,6 +57,11 @@
                     
                     <label>30793</label>
                     <visible>String.IsEqual(ListItem.Property(PyPlexer.CanMarkWatched),true) + String.IsEqual(ListItem.Property(PyPlexer.Watched),true) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+                </item>
+                <item library="resources/lib/context_actions/remove_from_on_deck.py">
+                    
+                    <label>30854</label>
+                    <visible>String.IsEqual(ListItem.Property(PyPlexer.OnDeck),true) + !String.IsEmpty(ListItem.Property(PyPlexer.MediaId)) + [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
                 </item>
                 <item library="resources/lib/context_actions/add_to_watchlist.py">
                     
