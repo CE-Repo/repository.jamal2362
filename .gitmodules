@@ -42,3 +42,11 @@
 	path = addons/plugin.video.pyplexer
 	url = https://github.com/CE-Repo/plugin.video.pyplexer.git
 	branch = main
+[submodule "addons/script.module.audiodata"]
+	path = addons/script.module.audiodata
+	url = https://github.com/CE-Repo/script.module.audiodata.git
+	branch = main
+[submodule "addons/script.module.sidedata"]
+	path = addons/script.module.sidedata
+	url = https://github.com/matthane/script.module.sidedata.git
+	branch = master
