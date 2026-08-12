@@ -38,10 +38,6 @@
 	path = addons/skin.arctic.fuse.3
 	url = https://github.com/CE-Repo/skin.arctic.fuse.3.git
 	branch = omega
-[submodule "addons/tools.tinyppi"]
-	path = addons/tools.tinyppi
-	url = https://github.com/CE-Repo/tools.tinyppi.git
-	branch = main
 [submodule "addons/plugin.video.pyplexer"]
 	path = addons/plugin.video.pyplexer
 	url = https://github.com/CE-Repo/plugin.video.pyplexer.git
