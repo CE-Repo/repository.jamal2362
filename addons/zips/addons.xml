@@ -253,7 +253,7 @@
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.sidedata" name="Sidedata" version="1.4.2" provider-name="matthane">
+</addon><addon id="script.module.sidedata" name="Sidedata" version="1.4.3" provider-name="matthane">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -267,7 +267,7 @@
     </assets>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <news>v1.4.2: documentation cleanup across README, FIELDS and NOTICE, no code changes.</news>
+    <news>v1.4.3: bundled libdovi updated to 3.4.0, built with upstream's release-deploy profile (thin LTO, stripped).</news>
   </extension>
 </addon><addon id="script.skinvariables" version="2.2.2" name="Skin Variables" provider-name="jurialmunkey">
 <requires>
@@ -318,7 +318,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.4.5" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.4.6" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.sidedata" version="1.4.2" />
