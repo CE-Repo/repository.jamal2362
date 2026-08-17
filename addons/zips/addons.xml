@@ -20,7 +20,7 @@
             <icon>resources/icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="plugin.video.pyplexer" name="PyPlexer" version="2.3.2" provider-name="jamal2362">
+</addon><addon id="plugin.video.pyplexer" name="PyPlexer" version="2.3.5" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.12.4" />
