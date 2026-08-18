@@ -201,7 +201,7 @@
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="screensaver.matrix" name="Matrix" version="3.4.0" provider-name="jamal2362">
+</addon><addon id="screensaver.matrix" name="Matrix" version="3.4.1" provider-name="jamal2362">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
@@ -363,7 +363,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="16.3.2.15">
+</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="17.3.2.15">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.2" />
