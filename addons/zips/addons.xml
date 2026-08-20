@@ -251,7 +251,7 @@
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.sidedata" name="Sidedata" version="1.4.3" provider-name="matthane">
+</addon><addon id="script.module.sidedata" name="Sidedata" version="1.5.0" provider-name="matthane">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -265,7 +265,7 @@
     </assets>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <news>v1.4.3: bundled libdovi updated to 3.4.0, built with upstream's release-deploy profile (thin LTO, stripped).</news>
+    <news>v1.5.0: publishes the rest of libdovi's RPU metadata: L8 saturation/hue trim vectors, colorimetry matrices and signal description, L4/L254/L255 blocks, raw L2 target_max_pq and the remaining header fields.</news>
   </extension>
 </addon><addon id="script.skinvariables" version="2.2.2" name="Skin Variables" provider-name="jurialmunkey">
 <requires>
@@ -316,10 +316,10 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.5.2" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.6.4" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.sidedata" version="1.4.2" />
+        <import addon="script.module.sidedata" version="1.5.0" />
         <import addon="script.module.audiodata" version="1.0.0" />
     </requires>
     <extension point="xbmc.service" library="resources/lib/service/monitor.py" />

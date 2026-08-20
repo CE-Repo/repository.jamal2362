@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tinyppi" name="TinyPPI" version="2.5.2" provider-name="jamal2362">
+<addon id="script.tinyppi" name="TinyPPI" version="2.6.4" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.sidedata" version="1.4.2"/>
+        <import addon="script.module.sidedata" version="1.5.0"/>
         <import addon="script.module.audiodata" version="1.0.0"/>
     </requires>
     <extension point="xbmc.service" library="resources/lib/service/monitor.py" />
