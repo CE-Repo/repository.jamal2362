@@ -93,7 +93,7 @@
             <fanart>fanart.png</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.video.themoviedb.helper" version="6.16.3" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="6.16.4" name="TMDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1" />
   <import addon="script.module.requests" version="2.9.1" />
@@ -316,7 +316,7 @@
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.6.4" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.6.7" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.sidedata" version="1.5.0" />
