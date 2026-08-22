@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.sidedata" name="Sidedata" version="1.5.0" provider-name="matthane">
+<addon id="script.module.sidedata" name="Sidedata" version="1.6.0" provider-name="matthane">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -13,6 +13,7 @@
     </assets>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <news>v1.5.0: publishes the rest of libdovi's RPU metadata: L8 saturation/hue trim vectors, colorimetry matrices and signal description, L4/L254/L255 blocks, raw L2 target_max_pq and the remaining header fields.</news>
+    <news>v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantization) with an include_mapping opt-out, plus the remaining header and block scalars. Every field libdovi decodes is now published.
+v1.5.0: publishes the rest of libdovi's RPU metadata: L8 saturation/hue trim vectors, colorimetry matrices and signal description, L4/L254/L255 blocks, raw L2 target_max_pq and the remaining header fields.</news>
   </extension>
 </addon>
