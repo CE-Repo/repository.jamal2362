@@ -93,7 +93,7 @@
             <fanart>fanart.png</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.video.themoviedb.helper" version="6.16.5" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="6.16.6" name="TMDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1" />
   <import addon="script.module.requests" version="2.9.1" />
@@ -237,7 +237,7 @@
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.module.sidedata" name="Sidedata" version="1.6.0" provider-name="matthane">
+</addon><addon id="script.module.sidedata" name="Sidedata" version="1.7.0" provider-name="matthane">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -251,8 +251,8 @@
     </assets>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <news>v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantization) with an include_mapping opt-out, plus the remaining header and block scalars. Every field libdovi decodes is now published.
-v1.5.0: publishes the rest of libdovi's RPU metadata: L8 saturation/hue trim vectors, colorimetry matrices and signal description, L4/L254/L255 blocks, raw L2 target_max_pq and the remaining header fields.</news>
+    <news>v1.7.0: decodes the display's Dolby Vision VSVDB. Addons get the fields from parse_vsvdb, skins get them as vsvdb. window properties.
+v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantization) with an include_mapping opt-out, plus the remaining header and block scalars. Every field libdovi decodes is now published.</news>
   </extension>
 </addon><addon id="script.skinvariables" version="2.2.2" name="Skin Variables" provider-name="jurialmunkey">
 <requires>
@@ -303,7 +303,7 @@ v1.5.0: publishes the rest of libdovi's RPU metadata: L8 saturation/hue trim vec
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.7.3" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.7.4" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.sidedata" version="1.6.0" />
