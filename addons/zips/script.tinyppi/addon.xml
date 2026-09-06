@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tinyppi" name="TinyPPI" version="2.7.7" provider-name="jamal2362">
+<addon id="script.tinyppi" name="TinyPPI" version="2.8.1" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.sidedata" version="1.6.0"/>
@@ -23,8 +23,8 @@
         <description lang="hu">Megnyit egy külön folyamatinformációs ablakot. Ez az ablak az aktuálisan lejátszott média kodek-, videó- és hangadatait jeleníti meg.</description>
         <description lang="zh">打开一个独立的进程信息窗口。此窗口显示当前播放媒体的编解码器、视频和音频详细信息。</description>
         <assets>
-            <icon>icon.jpg</icon>
-            <fanart>fanart.jpg</fanart>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
         </assets>
     </extension>
 </addon>
