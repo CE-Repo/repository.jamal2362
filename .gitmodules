@@ -46,3 +46,7 @@
 	path = addons/script.module.sidedata
 	url = https://github.com/matthane/script.module.sidedata.git
 	branch = master
+[submodule "addons/script.module.infotagger"]
+	path = addons/script.module.infotagger
+	url = https://github.com/jurialmunkey/script.module.infotagger.git
+	branch = main
