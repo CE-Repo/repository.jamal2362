@@ -50,3 +50,7 @@
 	path = addons/script.module.infotagger
 	url = https://github.com/jurialmunkey/script.module.infotagger.git
 	branch = main
+[submodule "addons/script.bdcontrol"]
+	path = addons/script.bdcontrol
+	url = https://github.com/CE-Repo/script.bdcontrol.git
+	branch = main
