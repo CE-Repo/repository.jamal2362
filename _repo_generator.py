@@ -228,6 +228,20 @@ class Generator:
 
             shutil.copy(addon_path, zips_path)
 
+    @staticmethod
+    def _same_entry(addon_entry, addon_root):
+        """
+        Compares the catalog entry with the addon's addon.xml. Comparing the
+        full element (instead of just the version attribute) makes sure that
+        metadata changes which keep the version untouched - a corrected
+        minversion, for example - still end up in addons.xml.
+        """
+
+        def serialize(element):
+            return ElementTree.tostring(element, encoding="unicode").strip()
+
+        return serialize(addon_entry) == serialize(addon_root)
+
     def _generate_addons_file(self, addons_xml_path):
         """
         Generates a zip for each found addon, and updates the addons.xml file accordingly.
@@ -262,7 +276,9 @@ class Generator:
                 self._copy_meta_files(addon, os.path.join(self.zips_path, id))
 
                 addon_entry = addons_root.find(addon_xpath.format(id))
-                if addon_entry is not None and addon_entry.get('version') != version:
+                if addon_entry is not None and not self._same_entry(
+                    addon_entry, addon_root
+                ):
                     index = addons_root.findall('addon').index(addon_entry)
                     addons_root.remove(addon_entry)
                     addons_root.insert(index, addon_root)
