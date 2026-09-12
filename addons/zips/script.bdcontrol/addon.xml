@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.bdcontrol"
+       name="BD Control"
+       version="1.0.2"
+       provider-name="jamal2362">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">Player controls for Blu-ray and UHD Blu-ray disc menus</summary>
+    <summary lang="de_de">Wiedergabesteuerung für Blu-ray- und UHD-Blu-ray-Disc-Menüs</summary>
+    <description lang="en_gb">Playing a Blu-ray or UHD Blu-ray with full disc menus hands the remote over to the disc: the OK button no longer opens Kodi's OSD, so pause, stop, seek, audio and subtitle selection become unreachable while only chapter skip keeps working. BD Control puts those controls back. It adds its own on-screen display, opened from a button you map with the Keymap Editor addon, holding four entries: the disc's popup menu, the disc's main menu, Kodi's own video OSD and a diagnostics page that checks the pieces a UHD Blu-ray needs on CoreELEC. The buttons can show icons, labels or both, and the whole panel is themeable.</description>
+    <description lang="de_de">Bei der Wiedergabe einer Blu-ray oder UHD Blu-ray mit vollständigen Disc-Menüs übernimmt die Disc die Fernbedienung: Die OK-Taste öffnet das Kodi-OSD nicht mehr, dadurch sind Pause, Stopp, Spulen sowie Ton- und Untertitelauswahl nicht mehr erreichbar – nur das Kapitelspringen funktioniert weiterhin. BD Control bringt diese Steuerung zurück. Das Addon bietet ein eigenes On-Screen-Display, das über eine im Keymap Editor belegte Taste geöffnet wird und vier Einträge enthält: das Popup-Menü der Disc, das Hauptmenü der Disc, das Kodi-eigene Video-OSD sowie eine Diagnoseseite, die prüft, was eine UHD Blu-ray unter CoreELEC benötigt. Die Schaltflächen lassen sich als Icons, Text oder beides anzeigen, und das gesamte Panel ist farblich anpassbar.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/CE-Repo/script.bdcontrol</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
