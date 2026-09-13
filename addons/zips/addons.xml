@@ -221,7 +221,7 @@
 			<fanart>fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon><addon id="script.bdcontrol" name="BD Control" version="1.0.4" provider-name="jamal2362">
+</addon><addon id="script.bdcontrol" name="BD Control" version="1.0.5" provider-name="jamal2362">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -340,7 +340,7 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.9.2" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.9.3" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.sidedata" version="1.6.0" />
