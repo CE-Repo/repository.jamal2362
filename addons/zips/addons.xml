@@ -241,9 +241,11 @@
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.lcd4linux" name="LCD4Linux" version="1.2.1" provider-name="U3knOwn">
+</addon><addon id="script.lcd4linux" name="LCD4Linux" version="1.2.2" provider-name="U3knOwn">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
+    
+    <import addon="script.module.sidedata" version="1.6.0" optional="true" />
   </requires>
 
   <extension point="xbmc.service" library="service.py" />
@@ -330,7 +332,7 @@
     <news>v1.7.0: decodes the display's Dolby Vision VSVDB. Addons get the fields from parse_vsvdb, skins get them as vsvdb. window properties.
 v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantization) with an include_mapping opt-out, plus the remaining header and block scalars. Every field libdovi decodes is now published.</news>
   </extension>
-</addon><addon id="script.skinvariables" version="2.2.3" name="Skin Variables" provider-name="jurialmunkey">
+</addon><addon id="script.skinvariables" version="2.2.4" name="Skin Variables" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.0" />
   <import addon="script.module.jurialmunkey" version="0.2.28" />
