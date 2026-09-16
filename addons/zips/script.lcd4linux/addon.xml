@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.lcd4linux"
+       name="LCD4Linux"
+       version="1.2.1"
+       provider-name="U3knOwn">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+
+  <extension point="xbmc.service" library="service.py"/>
+
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Show what Kodi is playing on an AX206 or Samsung SPF USB display, or on a tablet</summary>
+    <summary lang="de_DE">Zeigt die Kodi-Wiedergabe auf einem AX206-/Samsung-SPF-USB-Display oder einem Tablet an</summary>
+    <description lang="en_GB">Drives two families of USB display: the 3.5" 480x320 panels built around the AX206 controller - sold as AIDA64 / SmartDisplay screens and known from the dpf-ax and lcd4linux projects - and the Samsung SPF photo frames (SPF-72H, SPF-87H, SPF-107H and relatives) in their "mini monitor" mode. Without a USB panel it also drives a network display: any browser in full screen, typically an old tablet on the wall. The service shows what Kodi is playing: title, artist, album, cover art, a progress bar with elapsed and remaining time, plus clock, system load, temperature and anything else Kodi knows. Everything on screen is described by a JSON layout file, so pages, fonts, colours, positions and the data behind them can be changed freely. Any Kodi InfoLabel can be placed on the display. No extra Python modules are needed: USB access uses libusb through ctypes, and the PNG/JPEG decoders and font renderer are part of the add-on.</description>
+    <description lang="de_DE">Steuert zwei Familien von USB-Displays an: die 3,5" 480x320 LCDs mit AX206-Controller - als AIDA64-/SmartDisplay-Bildschirme verkauft und aus den Projekten dpf-ax und lcd4linux bekannt - sowie die Samsung-SPF-Bilderrahmen (SPF-72H, SPF-87H, SPF-107H und Verwandte) in deren "Mini-Monitor"-Modus. Auch ohne USB-Panel: als Netzwerkdisplay liefert das Add-on das Bild an jeden Browser im Vollbild, etwa ein altes Tablet an der Wand. Der Dienst zeigt die laufende Wiedergabe: Titel, Interpret, Album, Cover, einen Fortschrittsbalken mit gespielter und verbleibender Zeit, dazu Uhr, Systemauslastung, Temperatur und alles weitere, was Kodi kennt. Der gesamte Bildschirminhalt wird über JSON-Layoutdateien beschrieben, sodass Seiten, Schriften, Farben, Positionen und Datenquellen frei angepasst werden können. Jedes Kodi-InfoLabel lässt sich anzeigen. Zusätzliche Python-Module werden nicht benötigt: Der USB-Zugriff läuft über libusb via ctypes, PNG-/JPEG-Dekoder und Schriftrenderer sind Teil des Add-ons.</description>
+    <disclaimer lang="en_GB">Requires an AX206 based USB display with the dpf-ax firmware (USB ID 1908:0102) or a Samsung SPF photo frame.</disclaimer>
+    <disclaimer lang="de_DE">Benötigt ein AX206-basiertes USB-Display mit dpf-ax-Firmware (USB-ID 1908:0102) oder einen Samsung-SPF-Bilderrahmen.</disclaimer>
+    <platform>linux</platform>
+    <license>MIT</license>
+    <source>https://github.com/CE-Repo/script.lcd4linux</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources/screenshots/default-music.png</screenshot>
+      <screenshot>resources/screenshots/default-video.png</screenshot>
+      <screenshot>resources/screenshots/bigcover.png</screenshot>
+      <screenshot>resources/screenshots/dashboard.png</screenshot>
+      <screenshot>resources/screenshots/spf-music.png</screenshot>
+      <screenshot>resources/screenshots/spf-dashboard.png</screenshot>
+      <screenshot>resources/screenshots/xl-remaining.png</screenshot>
+      <screenshot>resources/screenshots/xl-player.png</screenshot>
+      <screenshot>resources/screenshots/xl-system.png</screenshot>
+      <screenshot>resources/screenshots/terminal.png</screenshot>
+      <screenshot>resources/screenshots/neon.png</screenshot>
+      <screenshot>resources/screenshots/vinyl.png</screenshot>
+      <screenshot>resources/screenshots/light.png</screenshot>
+    </assets>
+  </extension>
+</addon>
