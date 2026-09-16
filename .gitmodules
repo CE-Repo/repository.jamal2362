@@ -54,3 +54,7 @@
 	path = addons/script.bdcontrol
 	url = https://github.com/CE-Repo/script.bdcontrol.git
 	branch = main
+[submodule "addons/script.lcd4linux"]
+	path = addons/script.lcd4linux
+	url = https://github.com/CE-Repo/script.lcd4linux.git
+	branch = main
