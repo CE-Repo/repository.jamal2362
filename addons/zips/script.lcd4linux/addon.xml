@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.lcd4linux"
        name="LCD4Linux"
-       version="1.2.2"
+       version="1.2.4"
        provider-name="U3knOwn">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -38,6 +38,8 @@
       <screenshot>resources/screenshots/xl-remaining.png</screenshot>
       <screenshot>resources/screenshots/xl-player.png</screenshot>
       <screenshot>resources/screenshots/xl-system.png</screenshot>
+      <screenshot>resources/screenshots/xl-badges.png</screenshot>
+      <screenshot>resources/screenshots/xl-hdr.png</screenshot>
       <screenshot>resources/screenshots/terminal.png</screenshot>
       <screenshot>resources/screenshots/neon.png</screenshot>
       <screenshot>resources/screenshots/vinyl.png</screenshot>
