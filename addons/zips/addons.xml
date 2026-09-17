@@ -93,7 +93,7 @@
             <fanart>fanart.png</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.video.themoviedb.helper" version="6.17.1" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="6.17.3" name="TMDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1" />
   <import addon="script.module.requests" version="2.9.1" />
@@ -177,7 +177,7 @@
             <icon>icon.png</icon>
         </assets>
     </extension>
-</addon><addon id="resource.language.de_de" version="11.0.512" name="German" provider-name="Team Kodi, jamal2362">
+</addon><addon id="resource.language.de_de" version="11.0.609" name="German" provider-name="Team Kodi, jamal2362">
   <requires>
     <import addon="kodi.resource" version="1.0.0" />
   </requires>
@@ -429,10 +429,10 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="18.3.3.0">
+</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="18.3.3.1">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
-        <import addon="script.skinvariables" version="2.2.3" />
+        <import addon="script.skinvariables" version="2.2.4" />
         <import addon="script.texturemaker" version="0.2.9" />
         <import addon="plugin.video.themoviedb.helper" version="6.14.3" />
         <import addon="resource.images.weathericons.white" version="0.0.1" />
