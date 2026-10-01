@@ -385,9 +385,9 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.13.0" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.13.1" provider-name="jamal2362">
     <requires>
-        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="xbmc.python" version="3.1.0" />
         <import addon="script.module.sidedata" version="1.6.0" />
     </requires>
     <extension point="xbmc.service" library="resources/lib/service/monitor.py" />
@@ -395,7 +395,7 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
         <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
+        <platform>linux</platform>
         <license>AGPL-3.0-or-later</license>
         <source>https://github.com/CE-Repo/script.tinyppi</source>
         <summary lang="ar">يعرض معلومات مخصصة عن عملية المشغل</summary>
