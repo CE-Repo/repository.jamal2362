@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tinyppi" name="TinyPPI" version="2.14.0" provider-name="jamal2362">
+<addon id="script.tinyppi" name="TinyPPI" version="2.14.1" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.1.0"/>
         <import addon="script.module.sidedata" version="1.6.0"/>
@@ -22,6 +22,15 @@
         <description lang="en">Opens a separate process information window. This window displays codec, video, and audio details for the currently playing media.</description>
         <description lang="hu">Megnyit egy külön folyamatinformációs ablakot. Ez az ablak az aktuálisan lejátszott média kodek-, videó- és hangadatait jeleníti meg.</description>
         <description lang="zh">打开一个独立的进程信息窗口。此窗口显示当前播放媒体的编解码器、视频和音频详细信息。</description>
+        <!-- The latest version only: replace this entry on every version bump. -->
+        <news>v2.14.1
+- Web dashboard: much lighter on the box during library scans; the film and series lists stay current and are read only once for all open pages.
+- Web dashboard: the now-playing artwork comes from Kodi's texture cache.
+- Web dashboard: a device trying ten different wrong tokens is locked out for ten minutes; opened under a name outside the home network, the page always asks for the token.
+- Web dashboard: the page can no longer be framed by other sites and runs only its own files; open connections are capped, and the page also works in browsers that block local storage.
+- VS10 dialog: rapid taps no longer queue up; the last choice wins.
+- Hungarian translation completed.
+- General stability improvements.</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
