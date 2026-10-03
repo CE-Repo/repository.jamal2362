@@ -93,7 +93,7 @@
             <fanart>fanart.png</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.video.themoviedb.helper" version="6.17.4" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="6.17.5" name="TMDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1" />
   <import addon="script.module.requests" version="2.9.1" />
@@ -385,7 +385,7 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.14.2" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.15.0" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.1.0" />
         <import addon="script.module.sidedata" version="1.6.0" />
@@ -409,11 +409,11 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
         <description lang="hu">Megnyit egy külön folyamatinformációs ablakot. Ez az ablak az aktuálisan lejátszott média kodek-, videó- és hangadatait jeleníti meg.</description>
         <description lang="zh">打开一个独立的进程信息窗口。此窗口显示当前播放媒体的编解码器、视频和音频详细信息。</description>
         
-        <news>v2.14.2
-- Audio and subtitle tracks without a language tag (common on Blu-ray .m2ts) read UNK, e.g. "UNK (PGS)" instead of just "(PGS)".
-- Language codes TinyPPI does not know are shown as Kodi reports them instead of an empty row.
-- Without an audio codec, every audio row reads N/A instead of channels such as "FL, FR" or a bitrate; the channel graphic is hidden.
-- The web dashboard shows the same.</news>
+        <news>v2.15.0
+- The colour palettes grow from 50 to 250 colours: grays and every hue from red to rose, each in a vivid and a soft family, light to dark.
+- The colour picker opens with the HEX tile, then the setting's default colour (marked "(Default)"), then the palette sorted by colour.
+- Stored colours keep their colour; older stored forms are rewritten on start-up.
+- The language strings are sorted by area and numbered without gaps; all translations are kept.</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
