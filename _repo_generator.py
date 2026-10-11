@@ -47,14 +47,16 @@ def _export_ignored(addon_folder, paths):
 
 
 def _setup_colors():
-    color = os.system("color")
-    console = 0
-    if os.name == 'nt':  # Only if we are running on Windows
-        from ctypes import windll
+    """
+    Enables ANSI colors on the Windows console. Elsewhere (the CI runner
+    included) the output stays plain.
+    """
+    if os.name != 'nt':
+        return False
+    from ctypes import windll
 
-        k = windll.kernel32
-        console = k.SetConsoleMode(k.GetStdHandle(-11), 7)
-    return color == 1 or console == 1
+    k = windll.kernel32
+    return k.SetConsoleMode(k.GetStdHandle(-11), 7) == 1
 
 
 _COLOR_ESCAPE = "\x1b[{}m"
@@ -232,7 +234,7 @@ class Generator:
         for ext in root.findall("extension"):
             if ext.get("point") in ["xbmc.addon.metadata", "kodi.addon.metadata"]:
                 assets = ext.find("assets")
-                if not assets:
+                if assets is None:
                     continue
                 for art in [a for a in assets if a.text]:
                     copyfiles.append(os.path.normpath(art.text))
