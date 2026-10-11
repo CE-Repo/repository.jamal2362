@@ -1,0 +1,43 @@
+name: Pages
+
+# Publishes the repository on GitHub Pages (index.html with the repository
+# zip, the source to add in Kodi). Takes over from GitHub's built-in
+# "pages build and deployment", whose actions still target Node.js 20.
+# Needs Settings > Pages > Build and deployment > Source: GitHub Actions.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; a newer push waits for the running one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# actions/checkout runs `git init`, which otherwise prints a hint about the
+# default branch name.
+env:
+  GIT_CONFIG_COUNT: 1
+  GIT_CONFIG_KEY_0: init.defaultBranch
+  GIT_CONFIG_VALUE_0: main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+      # The repository as it is, without .git, .github and other dot files,
+      # as the built-in Jekyll build published it.
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v5
