@@ -93,7 +93,7 @@
             <fanart>fanart.png</fanart>
         </assets>
     </extension>
-</addon><addon id="plugin.video.themoviedb.helper" version="6.17.7" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="6.17.9" name="TMDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1" />
   <import addon="script.module.requests" version="2.9.1" />
@@ -336,7 +336,7 @@
     <news>v1.7.0: decodes the display's Dolby Vision VSVDB. Addons get the fields from parse_vsvdb, skins get them as vsvdb. window properties.
 v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantization) with an include_mapping opt-out, plus the remaining header and block scalars. Every field libdovi decodes is now published.</news>
   </extension>
-</addon><addon id="script.skinvariables" version="2.2.8" name="Skin Variables" provider-name="jurialmunkey">
+</addon><addon id="script.skinvariables" version="2.2.9" name="Skin Variables" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.0" />
   <import addon="script.module.jurialmunkey" version="0.2.28" />
@@ -385,7 +385,7 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.15.0" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.15.1" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.1.0" />
         <import addon="script.module.sidedata" version="1.6.0" />
@@ -409,11 +409,13 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
         <description lang="hu">Megnyit egy külön folyamatinformációs ablakot. Ez az ablak az aktuálisan lejátszott média kodek-, videó- és hangadatait jeleníti meg.</description>
         <description lang="zh">打开一个独立的进程信息窗口。此窗口显示当前播放媒体的编解码器、视频和音频详细信息。</description>
         
-        <news>v2.15.0
-- The colour palettes grow from 50 to 250 colours: grays and every hue from red to rose, each in a vivid and a soft family, light to dark.
-- The colour picker opens with the HEX tile, then the setting's default colour (marked "(Default)"), then the palette sorted by colour.
-- Stored colours keep their colour; older stored forms are rewritten on start-up.
-- The language strings are sorted by area and numbered without gaps; all translations are kept.</news>
+        <news>v2.15.1
+- Web dashboard: the token travels in a request header only, never in a URL; the live stream and pictures use a session cookie instead.
+- Web dashboard: reading without the token works on the home network only, and the lockout after wrong tokens counts per device.
+- Web dashboard: fixed shelves that went wrong while the library changed or during a search, the cover tint, the bar colour on load; a dashboard that cannot start is now handled cleanly.
+- Resume points, frame rates and luminance values Kodi reports as invalid no longer break the display.
+- Colour settings with non-Latin digits are read correctly, and missing translations fall back to English.
+- Share passwords no longer appear in the log.</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
@@ -437,12 +439,12 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="20.3.3.9">
+</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="20.3.3.12">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
-        <import addon="script.skinvariables" version="2.2.8" />
+        <import addon="script.skinvariables" version="2.2.9" />
         <import addon="script.texturemaker" version="0.2.9" />
-        <import addon="plugin.video.themoviedb.helper" version="6.17.6" />
+        <import addon="plugin.video.themoviedb.helper" version="6.17.9" />
         <import addon="resource.images.weathericons.white" version="0.0.1" />
         <import addon="resource.images.studios.coloured" version="0.0.1" />
         <import addon="resource.font.robotocjksc" version="0.0.3" />
