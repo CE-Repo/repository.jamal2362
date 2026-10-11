@@ -6,6 +6,7 @@
 
 import os
 import shutil
+import subprocess
 import hashlib
 import zipfile
 from xml.etree import ElementTree
@@ -21,6 +22,28 @@ IGNORE = [
     ".idea",
     "venv",
 ]
+
+
+def _export_ignored(addon_folder, paths):
+    """
+    Returns the subset of paths (relative to addon_folder) that carry the
+    `export-ignore` attribute, i.e. the files `git archive` would leave out.
+    """
+    if not paths or not os.path.exists(os.path.join(addon_folder, ".git")):
+        return set()
+    result = subprocess.run(
+        ["git", "-C", addon_folder, "check-attr", "-z", "--stdin", "export-ignore"],
+        input="\0".join(p.replace(os.sep, "/") for p in paths) + "\0",
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    fields = result.stdout.split("\0")
+    return {
+        os.path.normpath(fields[i])
+        for i in range(0, len(fields) - 2, 3)
+        if fields[i + 2] == "set"
+    }
 
 
 def _setup_colors():
@@ -154,18 +177,17 @@ class Generator:
 
         for root, dirs, files in os.walk(addon_folder):
             # remove any unneeded artifacts
-            for i in IGNORE:
-                if i in dirs:
-                    try:
-                        dirs.remove(i)
-                    except:
-                        pass
-                for f in files:
-                    if f.startswith(i):
-                        try:
-                            files.remove(f)
-                        except:
-                            pass
+            dirs[:] = [d for d in dirs if d not in IGNORE]
+            files[:] = [f for f in files if not any(f.startswith(i) for i in IGNORE)]
+
+            # honour the add-on's own `export-ignore` rules in .gitattributes
+            rel_root = os.path.relpath(root, addon_folder)
+            ignored = _export_ignored(
+                addon_folder,
+                [os.path.normpath(os.path.join(rel_root, n)) for n in dirs + files],
+            )
+            dirs[:] = [d for d in dirs if os.path.normpath(os.path.join(rel_root, d)) not in ignored]
+            files[:] = [f for f in files if os.path.normpath(os.path.join(rel_root, f)) not in ignored]
 
             archive_root = os.path.abspath(root)[root_len:]
 
