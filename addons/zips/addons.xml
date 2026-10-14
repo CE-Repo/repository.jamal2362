@@ -391,7 +391,7 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="script.tinyppi" name="TinyPPI" version="2.15.3" provider-name="jamal2362">
+</addon><addon id="script.tinyppi" name="TinyPPI" version="2.15.4" provider-name="jamal2362">
     <requires>
         <import addon="xbmc.python" version="3.1.0" />
         <import addon="script.module.sidedata" version="1.6.0" />
