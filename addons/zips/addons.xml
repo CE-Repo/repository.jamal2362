@@ -100,7 +100,7 @@
   <import addon="script.module.pil" version="1.1.7" />
   <import addon="script.module.addon.signals" version="0.0.6" />
   <import addon="script.module.jurialmunkey" version="0.2.35" />
-  <import addon="script.module.infotagger" version="0.0.9" />
+  <import addon="script.module.infotagger" version="0.1.0" />
   <import addon="script.module.qrcode" version="6.1.0" />
 </requires>
 <extension point="xbmc.python.pluginsource" library="resources/plugin.py">
@@ -292,7 +292,7 @@
       <screenshot>resources/screenshots/light.png</screenshot>
     </assets>
   </extension>
-</addon><addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.0.9">
+</addon><addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.1.0">
   <requires>
     <import addon="xbmc.python" version="3.0.1" />
   </requires>
@@ -341,6 +341,25 @@
     <license>GPL-2.0-or-later</license>
     <news>v1.7.0: decodes the display's Dolby Vision VSVDB. Addons get the fields from parse_vsvdb, skins get them as vsvdb. window properties.
 v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantization) with an include_mapping opt-out, plus the remaining header and block scalars. Every field libdovi decodes is now published.</news>
+  </extension>
+</addon><addon id="script.reboottoandroid" name="Reboot to Android" version="1.1.0" provider-name="jamal2362">
+  <requires>
+    <import addon="xbmc.python" version="3.1.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Reboot to Android, if possible</summary>
+    <summary lang="de_DE">In Android neu starten, falls möglich</summary>
+    <description lang="en_GB">Reboots CoreELEC on Amlogic devices into the Android system installed in internal storage (eMMC/NAND). Requires the rebootfromnand script shipped with CoreELEC.</description>
+    <description lang="de_DE">Startet CoreELEC auf Amlogic-Geräten in das im internen Speicher (eMMC/NAND) installierte Android neu. Benötigt das bei CoreELEC mitgelieferte Skript rebootfromnand.</description>
+    <platform>linux</platform>
+    <license>MIT</license>
+    <source>https://github.com/CE-Repo/script.reboottoandroid</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon><addon id="script.skinvariables" version="2.2.9" name="Skin Variables" provider-name="jurialmunkey">
 <requires>

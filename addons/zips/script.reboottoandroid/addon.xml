@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.reboottoandroid" name="Reboot to Android" version="1.1.0" provider-name="jamal2362">
+  <requires>
+    <import addon="xbmc.python" version="3.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Reboot to Android, if possible</summary>
+    <summary lang="de_DE">In Android neu starten, falls möglich</summary>
+    <description lang="en_GB">Reboots CoreELEC on Amlogic devices into the Android system installed in internal storage (eMMC/NAND). Requires the rebootfromnand script shipped with CoreELEC.</description>
+    <description lang="de_DE">Startet CoreELEC auf Amlogic-Geräten in das im internen Speicher (eMMC/NAND) installierte Android neu. Benötigt das bei CoreELEC mitgelieferte Skript rebootfromnand.</description>
+    <platform>linux</platform>
+    <license>MIT</license>
+    <source>https://github.com/CE-Repo/script.reboottoandroid</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
