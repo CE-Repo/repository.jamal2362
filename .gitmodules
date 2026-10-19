@@ -58,3 +58,7 @@
 	path = addons/script.lcd4linux
 	url = https://github.com/CE-Repo/script.lcd4linux.git
 	branch = main
+[submodule "addons/script.reboottoandroid"]
+	path = addons/script.reboottoandroid
+	url = https://github.com/CE-Repo/script.reboottoandroid.git
+	branch = main
