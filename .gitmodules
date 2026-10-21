@@ -62,3 +62,7 @@
 	path = addons/script.reboottoandroid
 	url = https://github.com/CE-Repo/script.reboottoandroid.git
 	branch = main
+[submodule "addons/resource.images.arctic.splash"]
+	path = addons/resource.images.arctic.splash
+	url = https://github.com/jurialmunkey/resource.images.arctic.splash.git
+	branch = main
