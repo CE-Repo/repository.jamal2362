@@ -66,3 +66,7 @@
 	path = addons/resource.images.arctic.splash
 	url = https://github.com/jurialmunkey/resource.images.arctic.splash.git
 	branch = main
+[submodule "addons/resource.images.arctic.weather"]
+	path = addons/resource.images.arctic.weather
+	url = https://github.com/jurialmunkey/resource.images.arctic.weather.git
+	branch = main
