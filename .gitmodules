@@ -102,3 +102,7 @@
 	path = addons/script.module.tmdbhelper.sync.floppy
 	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.floppy.git
 	branch = main
+[submodule "addons/script.wikipedia"]
+	path = addons/script.wikipedia
+	url = https://github.com/jurialmunkey/script.wikipedia.git
+	branch = main
