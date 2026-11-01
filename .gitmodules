@@ -70,3 +70,39 @@
 	path = addons/resource.images.arctic.weather
 	url = https://github.com/jurialmunkey/resource.images.arctic.weather.git
 	branch = main
+[submodule "addons/screensaver.arctic.splash"]
+	path = addons/screensaver.arctic.splash
+	url = https://github.com/jurialmunkey/screensaver.arctic.splash.git
+	branch = main
+[submodule "addons/script.module.tmdbhelper.sync.mdblist"]
+	path = addons/script.module.tmdbhelper.sync.mdblist
+	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.mdblist.git
+	branch = main
+[submodule "addons/script.module.tmdbhelper.sync.trakt"]
+	path = addons/script.module.tmdbhelper.sync.trakt
+	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.trakt.git
+	branch = main
+[submodule "addons/script.module.tmdbhelper.sync.kodi"]
+	path = addons/script.module.tmdbhelper.sync.kodi
+	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.kodi.git
+	branch = main
+[submodule "addons/script.module.tmdbhelper.sync.tvdb"]
+	path = addons/script.module.tmdbhelper.sync.tvdb
+	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.tvdb.git
+	branch = main
+[submodule "addons/script.module.tmdbhelper.sync.gemini"]
+	path = addons/script.module.tmdbhelper.sync.gemini
+	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.gemini.git
+	branch = main
+[submodule "addons/script.module.tmdbhelper.sync.simkl"]
+	path = addons/script.module.tmdbhelper.sync.simkl
+	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.simkl.git
+	branch = main
+[submodule "addons/script.module.tmdbhelper.sync.floppy"]
+	path = addons/script.module.tmdbhelper.sync.floppy
+	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.floppy.git
+	branch = main
+[submodule "addons/script.wikipedia"]
+	path = addons/script.wikipedia
+	url = https://github.com/jurialmunkey/script.wikipedia.git
+	branch = main
