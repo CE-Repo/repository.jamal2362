@@ -37,7 +37,7 @@
 [submodule "addons/skin.arctic.fuse.3"]
 	path = addons/skin.arctic.fuse.3
 	url = https://github.com/CE-Repo/skin.arctic.fuse.3.git
-	branch = omega
+	branch = piers
 [submodule "addons/plugin.video.pyplexer"]
 	path = addons/plugin.video.pyplexer
 	url = https://github.com/CE-Repo/plugin.video.pyplexer.git
