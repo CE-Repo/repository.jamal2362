@@ -106,3 +106,27 @@
 	path = addons/script.wikipedia
 	url = https://github.com/jurialmunkey/script.wikipedia.git
 	branch = main
+[submodule "addons/resource.images.arctic.backgrounds.bauhaus"]
+	path = addons/resource.images.arctic.backgrounds.bauhaus
+	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.bauhaus.git
+	branch = main
+[submodule "addons/resource.images.arctic.backgrounds.mosaic"]
+	path = addons/resource.images.arctic.backgrounds.mosaic
+	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.mosaic.git
+	branch = main
+[submodule "addons/resource.images.arctic.backgrounds.surrealist"]
+	path = addons/resource.images.arctic.backgrounds.surrealist
+	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.surrealist.git
+	branch = main
+[submodule "addons/resource.images.arctic.backgrounds.expressionist"]
+	path = addons/resource.images.arctic.backgrounds.expressionist
+	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.expressionist.git
+	branch = main
+[submodule "addons/resource.images.arctic.backgrounds.couture"]
+	path = addons/resource.images.arctic.backgrounds.couture
+	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.couture.git
+	branch = main
+[submodule "addons/resource.images.arctic.backgrounds.masquerade"]
+	path = addons/resource.images.arctic.backgrounds.masquerade
+	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.masquerade.git
+	branch = main
