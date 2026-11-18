@@ -2,14 +2,6 @@
 	path = addons/plugin.video.gronkhtv
 	url = https://github.com/CE-Repo/plugin.video.gronkhtv.git
 	branch = main
-[submodule "addons/plugin.video.themoviedb.helper"]
-	path = addons/plugin.video.themoviedb.helper
-	url = https://github.com/jurialmunkey/plugin.video.themoviedb.helper.git
-	branch = nexus
-[submodule "addons/resource.font.robotocjksc"]
-	path = addons/resource.font.robotocjksc
-	url = https://github.com/jurialmunkey/resource.font.robotocjksc.git
-	branch = main
 [submodule "addons/resource.language.de_de"]
 	path = addons/resource.language.de_de
 	url = https://github.com/CE-Repo/resource.language.de_de.git
@@ -17,18 +9,6 @@
 [submodule "addons/screensaver.matrix"]
 	path = addons/screensaver.matrix
 	url = https://github.com/CE-Repo/screensaver.matrix.git
-	branch = main
-[submodule "addons/script.module.jurialmunkey"]
-	path = addons/script.module.jurialmunkey
-	url = https://github.com/jurialmunkey/script.module.jurialmunkey.git
-	branch = main
-[submodule "addons/script.skinvariables"]
-	path = addons/script.skinvariables
-	url = https://github.com/jurialmunkey/script.skinvariables.git
-	branch = nexus
-[submodule "addons/script.texturemaker"]
-	path = addons/script.texturemaker
-	url = https://github.com/jurialmunkey/script.texturemaker.git
 	branch = main
 [submodule "addons/script.tinyppi"]
 	path = addons/script.tinyppi
@@ -46,10 +26,6 @@
 	path = addons/script.module.sidedata
 	url = https://github.com/matthane/script.module.sidedata.git
 	branch = master
-[submodule "addons/script.module.infotagger"]
-	path = addons/script.module.infotagger
-	url = https://github.com/jurialmunkey/script.module.infotagger.git
-	branch = main
 [submodule "addons/script.bdcontrol"]
 	path = addons/script.bdcontrol
 	url = https://github.com/CE-Repo/script.bdcontrol.git
@@ -61,72 +37,4 @@
 [submodule "addons/script.reboottoandroid"]
 	path = addons/script.reboottoandroid
 	url = https://github.com/CE-Repo/script.reboottoandroid.git
-	branch = main
-[submodule "addons/resource.images.arctic.splash"]
-	path = addons/resource.images.arctic.splash
-	url = https://github.com/jurialmunkey/resource.images.arctic.splash.git
-	branch = main
-[submodule "addons/resource.images.arctic.weather"]
-	path = addons/resource.images.arctic.weather
-	url = https://github.com/jurialmunkey/resource.images.arctic.weather.git
-	branch = main
-[submodule "addons/screensaver.arctic.splash"]
-	path = addons/screensaver.arctic.splash
-	url = https://github.com/jurialmunkey/screensaver.arctic.splash.git
-	branch = main
-[submodule "addons/script.module.tmdbhelper.sync.mdblist"]
-	path = addons/script.module.tmdbhelper.sync.mdblist
-	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.mdblist.git
-	branch = main
-[submodule "addons/script.module.tmdbhelper.sync.trakt"]
-	path = addons/script.module.tmdbhelper.sync.trakt
-	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.trakt.git
-	branch = main
-[submodule "addons/script.module.tmdbhelper.sync.kodi"]
-	path = addons/script.module.tmdbhelper.sync.kodi
-	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.kodi.git
-	branch = main
-[submodule "addons/script.module.tmdbhelper.sync.tvdb"]
-	path = addons/script.module.tmdbhelper.sync.tvdb
-	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.tvdb.git
-	branch = main
-[submodule "addons/script.module.tmdbhelper.sync.gemini"]
-	path = addons/script.module.tmdbhelper.sync.gemini
-	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.gemini.git
-	branch = main
-[submodule "addons/script.module.tmdbhelper.sync.simkl"]
-	path = addons/script.module.tmdbhelper.sync.simkl
-	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.simkl.git
-	branch = main
-[submodule "addons/script.module.tmdbhelper.sync.floppy"]
-	path = addons/script.module.tmdbhelper.sync.floppy
-	url = https://github.com/jurialmunkey/script.module.tmdbhelper.sync.floppy.git
-	branch = main
-[submodule "addons/script.wikipedia"]
-	path = addons/script.wikipedia
-	url = https://github.com/jurialmunkey/script.wikipedia.git
-	branch = main
-[submodule "addons/resource.images.arctic.backgrounds.bauhaus"]
-	path = addons/resource.images.arctic.backgrounds.bauhaus
-	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.bauhaus.git
-	branch = main
-[submodule "addons/resource.images.arctic.backgrounds.mosaic"]
-	path = addons/resource.images.arctic.backgrounds.mosaic
-	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.mosaic.git
-	branch = main
-[submodule "addons/resource.images.arctic.backgrounds.surrealist"]
-	path = addons/resource.images.arctic.backgrounds.surrealist
-	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.surrealist.git
-	branch = main
-[submodule "addons/resource.images.arctic.backgrounds.expressionist"]
-	path = addons/resource.images.arctic.backgrounds.expressionist
-	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.expressionist.git
-	branch = main
-[submodule "addons/resource.images.arctic.backgrounds.couture"]
-	path = addons/resource.images.arctic.backgrounds.couture
-	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.couture.git
-	branch = main
-[submodule "addons/resource.images.arctic.backgrounds.masquerade"]
-	path = addons/resource.images.arctic.backgrounds.masquerade
-	url = https://github.com/jurialmunkey/resource.images.arctic.backgrounds.masquerade.git
 	branch = main
