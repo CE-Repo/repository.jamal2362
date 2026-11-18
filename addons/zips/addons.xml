@@ -257,7 +257,7 @@
         <description lang="en_GB">Japanese weather cards at 320 x 720: original illustrations, simplified watercolours, minimal woodblock prints and a layered animated woodblock set. Static landscape woodblock artwork at 1280 x 720 is available for weather dialogs. Each set covers Kodi weather codes 0-47 and na. Animated artwork uses static plates and up to five single-frame PNGs per effect.</description>
         <platform>all</platform>
     </extension>
-</addon><addon id="resource.language.de_de" version="11.0.609" name="German" provider-name="Team Kodi, jamal2362">
+</addon><addon id="resource.language.de_de" version="11.0.611" name="German" provider-name="Team Kodi, jamal2362">
   <requires>
     <import addon="kodi.resource" version="1.0.0" />
   </requires>
@@ -670,10 +670,10 @@ v1.6.0: publishes the composer data_mapping (reshaping curves and NLQ dequantiza
     <fanart>fanart.jpg</fanart>
   </assets>
 </extension>
-</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="20.3.5.2">
+</addon><addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 (U3k)" provider-name="jurialmunkey, jamal2362" version="20.3.5.5">
     <requires>
         <import addon="xbmc.gui" version="5.18.0" />
-        <import addon="script.skinvariables" version="2.3.2" />
+        <import addon="script.skinvariables" version="2.3.3" />
         <import addon="script.texturemaker" version="0.2.9" />
         <import addon="plugin.video.themoviedb.helper" version="6.22.1" />
         <import addon="resource.images.weathericons.white" version="0.0.1" />
