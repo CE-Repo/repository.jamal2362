@@ -288,6 +288,7 @@ class Generator:
 
         addon_xpath = "addon[@id='{}']"
         changed = False
+        ids = set()
         for addon in folders:
             try:
                 addon_xml_path = os.path.join(self.release_path, addon, "addon.xml")
@@ -295,6 +296,7 @@ class Generator:
                 addon_root = addon_xml.getroot()
                 id = addon_root.get('id')
                 version = addon_root.get('version')
+                ids.add(id)
 
                 self._create_zip(addon, id, version)
                 self._copy_meta_files(addon, os.path.join(self.zips_path, id))
@@ -317,6 +319,27 @@ class Generator:
                         color_text(id, 'yellow'), color_text(e, 'red')
                     )
                 )
+
+        # Addons whose source folder is gone: drop their entry and zip folder.
+        # A folder that exists but lacks addon.xml (a submodule that was not
+        # checked out) keeps its published version.
+        ids.update(
+            i for i in os.listdir(self.release_path)
+            if os.path.isdir(os.path.join(self.release_path, i)) and i != "zips"
+        )
+        if ids:
+            for addon_entry in addons_root.findall('addon'):
+                if addon_entry.get('id') not in ids:
+                    addons_root.remove(addon_entry)
+                    changed = True
+                    print("Removed orphaned entry: {}".format(
+                        color_text(addon_entry.get('id'), 'yellow')))
+            for entry in os.listdir(self.zips_path):
+                orphan = os.path.join(self.zips_path, entry)
+                if os.path.isdir(orphan) and entry not in ids:
+                    shutil.rmtree(orphan)
+                    print("Removed orphaned folder: {}".format(
+                        color_text(orphan, 'yellow')))
 
         if changed:
             addons_root[:] = sorted(addons_root, key=lambda addon: addon.get('id'))
